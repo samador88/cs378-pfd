@@ -49,6 +49,8 @@ config:
 
 test: RunPFD.out TestPFD.out
 
+test_only: TestPFD.out
+
 pfd-tests:
 	git clone https://github.com/cs378-summer-2015/pfd-tests.git
 

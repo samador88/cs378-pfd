@@ -1,0 +1,294 @@
+        -:    0:Source:PFD.c++
+        -:    0:Graph:PFD.gcno
+        -:    0:Data:PFD.gcda
+        -:    0:Runs:1
+        -:    0:Programs:1
+        -:    1:// --------
+        -:    2:// includes
+        -:    3:// --------
+        -:    4:
+        -:    5:#include <cassert>  // assert
+        -:    6:#include <iostream> // endl, istream, ostream
+        -:    7:#include <sstream>  // istringstream
+        -:    8:#include <string>   // getline, string
+        -:    9:#include <utility>  // make_pair, pair
+        -:   10:#include <vector>   //resize
+        -:   11:#include <list>
+        -:   12:#include <queue>
+        -:   13:#include "PFD.h"
+        -:   14:
+        -:   15:using namespace std;
+        -:   16:
+        1:   17:vector<int> tasks(12); //contains number of dependencies left for job i
+call    0 returned 100%
+call    1 returned 100%
+branch  2 taken 100% (fallthrough)
+branch  3 taken 0% (throw)
+call    4 returned 100%
+call    5 returned 100%
+call    6 never executed
+call    7 never executed
+        1:   18:vector<list<int>> adjacency_list = {{},{},{},{},{},{}};
+call    0 returned 100%
+call    1 returned 100%
+branch  2 taken 100% (fallthrough)
+branch  3 taken 0% (throw)
+call    4 returned 100%
+branch  5 taken 100% (fallthrough)
+branch  6 taken 0% (throw)
+call    7 returned 100%
+branch  8 taken 100% (fallthrough)
+branch  9 taken 0% (throw)
+call   10 returned 100%
+branch 11 taken 100% (fallthrough)
+branch 12 taken 0% (throw)
+call   13 returned 100%
+branch 14 taken 100% (fallthrough)
+branch 15 taken 0% (throw)
+call   16 returned 100%
+branch 17 taken 100% (fallthrough)
+branch 18 taken 0% (throw)
+call   19 returned 100%
+branch 20 taken 100% (fallthrough)
+branch 21 taken 0% (throw)
+branch 22 taken 86% (fallthrough)
+branch 23 taken 14%
+call   24 returned 100%
+call   25 returned 100%
+call   26 returned 100%
+branch 27 never executed
+branch 28 never executed
+call   29 never executed
+call   30 never executed
+call   31 never executed
+        1:   19:priority_queue<int, vector<int>, greater<int>> pri_q;
+call    0 returned 100%
+call    1 returned 100%
+branch  2 taken 100% (fallthrough)
+branch  3 taken 0% (throw)
+call    4 returned 100%
+call    5 returned 100%
+call    6 never executed
+        -:   20:// ------------
+        -:   21:// pfd_read_first
+        -:   22:// ------------
+        -:   23:
+function _Z14pfd_read_firstRKSs called 4 returned 100% blocks executed 86%
+        4:   24:int pfd_read_first (const string& s) {
+        4:   25:    istringstream sin(s);
+call    0 returned 100%
+branch  1 taken 100% (fallthrough)
+branch  2 taken 0% (throw)
+        -:   26:    int i;
+        -:   27:    int j;
+        4:   28:    sin >> i >> j;
+call    0 returned 100%
+branch  1 taken 100% (fallthrough)
+branch  2 taken 0% (throw)
+call    3 returned 100%
+branch  4 taken 100% (fallthrough)
+branch  5 taken 0% (throw)
+        4:   29:    tasks.resize(i + 1);
+call    0 returned 100%
+branch  1 taken 100% (fallthrough)
+branch  2 taken 0% (throw)
+      315:   30:    for(int k = 0; k < i+1; k++){
+branch  0 taken 99%
+branch  1 taken 1% (fallthrough)
+      311:   31:        tasks[k] = 0;
+call    0 returned 100%
+        -:   32:    }
+        4:   33:    return j;}
+call    0 returned 100%
+call    1 never executed
+        -:   34:
+        -:   35:// ------------
+        -:   36:// pfd_read_rest
+        -:   37:// ------------
+        -:   38:
+function _Z13pfd_read_restRKSs called 4 returned 100% blocks executed 76%
+        4:   39:list<int> pfd_read_rest (const string& s) {
+        4:   40:    list<int> lst;
+call    0 returned 100%
+branch  1 taken 100% (fallthrough)
+branch  2 taken 0% (throw)
+        8:   41:    istringstream sin(s);
+call    0 returned 100%
+branch  1 taken 100% (fallthrough)
+branch  2 taken 0% (throw)
+call    3 returned 100%
+call    4 never executed
+call    5 never executed
+        -:   42:    int tasknumber;
+        -:   43:    int numdepend;
+        4:   44:    sin >> tasknumber >> numdepend;
+call    0 returned 100%
+branch  1 taken 100% (fallthrough)
+branch  2 taken 0% (throw)
+call    3 returned 100%
+branch  4 taken 100% (fallthrough)
+branch  5 taken 0% (throw)
+        4:   45:    lst.push_back(tasknumber);
+call    0 returned 100%
+branch  1 taken 100% (fallthrough)
+branch  2 taken 0% (throw)
+        4:   46:    lst.push_back(numdepend);
+call    0 returned 100%
+branch  1 taken 100% (fallthrough)
+branch  2 taken 0% (throw)
+       10:   47:    for(int i = 0; i < numdepend; ++i){
+branch  0 taken 60%
+branch  1 taken 40% (fallthrough)
+        -:   48:        int j;
+        6:   49:        sin >> j;
+call    0 returned 100%
+branch  1 taken 100% (fallthrough)
+branch  2 taken 0% (throw)
+        6:   50:        lst.push_back(j);
+call    0 returned 100%
+branch  1 taken 100% (fallthrough)
+branch  2 taken 0% (throw)
+        -:   51:    }
+        8:   52:    return lst;}
+        -:   53:/*    tasks[tasknumber] = numdepend;
+        -:   54:
+        -:   55:    for (int i = 0; i < numdepend; ++i){
+        -:   56:        sin >> j;
+        -:   57:
+        -:   58:    }
+        -:   59:    tasks.resize(i);
+        -:   60:    return j;}
+        -:   61:*/
+function _Z14build_adj_listSt4listIiSaIiEE called 4 returned 100% blocks executed 100%
+        4:   62:int build_adj_list (list<int> vals){
+        4:   63:    int i = 0;
+        4:   64:    list<int>::iterator p = vals.begin();
+call    0 returned 100%
+        4:   65:    int task = *p;
+call    0 returned 100%
+        4:   66:    ++++p;
+call    0 returned 100%
+call    1 returned 100%
+       14:   67:    while(p != vals.end()){
+call    0 returned 100%
+call    1 returned 100%
+branch  2 taken 60%
+branch  3 taken 40% (fallthrough)
+        6:   68:        adjacency_list[*p].push_back(task);
+call    0 returned 100%
+call    1 returned 100%
+call    2 returned 100%
+branch  3 taken 100% (fallthrough)
+branch  4 taken 0% (throw)
+        6:   69:        tasks[*p] += 1;
+call    0 returned 100%
+call    1 returned 100%
+        6:   70:        ++i;
+        6:   71:        ++p;}
+call    0 returned 100%
+        4:   72:        return i;}
+        -:   73:
+function _Z15create_adj_listv called 0 returned 0% blocks executed 0%
+    #####:   74:void create_adj_list (){ //place holder function, absorb into main 
+    #####:   75:    adjacency_list.resize(tasks.size());
+call    0 never executed
+call    1 never executed
+function _GLOBAL__sub_I_tasks called 1 returned 100% blocks executed 100%
+function _Z41__static_initialization_and_destruction_0ii called 1 returned 100% blocks executed 73%
+        3:   76:}
+call    0 returned 100%
+branch  1 taken 100% (fallthrough)
+branch  2 taken 0%
+branch  3 taken 100% (fallthrough)
+branch  4 taken 0%
+        -:   77:
+        -:   78:// ------------
+        -:   79:// pfd_eval
+        -:   80:// ------------
+        -:   81:/*
+        -:   82:int pfd_cycle_length(int i) {
+        -:   83:    assert(i > 0);
+        -:   84:    #ifdef CACHE
+        -:   85:    int current = i;
+        -:   86:    if (current < 1000000 && arr[current] != 0)
+        -:   87:    {
+        -:   88:     return arr[i];
+        -:   89:    }
+        -:   90:    #endif
+        -:   91:    int c = 1;
+        -:   92:    while (i > 1) 
+        -:   93:    {
+        -:   94:        #ifdef CACHE
+        -:   95:        if (i < 1000000 && arr[i] != 0)
+        -:   96:        {
+        -:   97:            arr[current] = arr[i] + c - 1;
+        -:   98:            return (arr[i] + c-1);       //-1 because one was already counted at initialization
+        -:   99:        }    
+        -:  100:        #endif
+        -:  101:        if((i % 2) == 0)
+        -:  102:            i = (i / 2);
+        -:  103:        else
+        -:  104:            i = (3 * i) + 1;
+        -:  105:        ++c;
+        -:  106:    }
+        -:  107:    assert(c > 0);
+        -:  108:    #ifdef CACHE
+        -:  109:    arr[current] = c;
+        -:  110:    #endif
+        -:  111:    return c;
+        -:  112:}
+        -:  113:
+        -:  114:
+        -:  115:int pfd_maxcl(int i, int j) {
+        -:  116:    assert(i > 0 && j > 0);
+        -:  117:    assert(i < 1000000 && j < 1000000);
+        -:  118:    int max = 0;
+        -:  119:    int n;
+        -:  120:    while(i <= j) 
+        -:  121:    {
+        -:  122:       n = pfd_cycle_length(i);
+        -:  123:       if (n > max)
+        -:  124:           {
+        -:  125:               max = n;
+        -:  126:           }
+        -:  127:       ++i;
+        -:  128:    }
+        -:  129:    assert(max > 0);
+        -:  130:    return max;
+        -:  131:}
+        -:  132:
+        -:  133:
+        -:  134:int pfd_eval (int i, int j) {
+        -:  135:    // <your code>
+        -:  136:    assert(i > 0);
+        -:  137:    assert(j > 0);
+        -:  138:    if (i <= j)
+        -:  139:    {
+        -:  140:        return pfd_maxcl(i, j);
+        -:  141:    }
+        -:  142:    else
+        -:  143:       return pfd_maxcl(j, i);    //in case numbers are given backwards like someone on piazza said
+        -:  144:    return 1;
+        -:  145:}
+        -:  146:
+        -:  147:        
+        -:  148:// -------------
+        -:  149:// pfd_print
+        -:  150:// -------------
+        -:  151:
+        -:  152:void pfd_print (ostream& w, int i, int j, int v) {
+        -:  153:    w << i << " " << j << " " << v << endl;}
+        -:  154:
+        -:  155:// -------------
+        -:  156:// pfd_solve
+        -:  157:// -------------
+        -:  158:
+        -:  159:void pfd_solve (istream& r, ostream& w) {
+        -:  160:    string s;
+        -:  161:    while (getline(r, s)) {
+        -:  162:        const pair<int, int> p = pfd_read(s);
+        -:  163:        const int            i = p.first;
+        -:  164:        const int            j = p.second;
+        -:  165:        const int            v = pfd_eval(i, j);
+        -:  166:        pfd_print(w, i, j, v);}}
+        -:  167:        */
