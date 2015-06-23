@@ -1,9 +1,9 @@
 FILES :=                              \
     .travis.yml                       \
-    pfd-tests/sa4265-RunPFD.in   \
-    pfd-tests/sa4265-RunPFD.out  \
-    pfd-tests/sa4265-TestPFD.c++ \
-    pfd-tests/sa4265-TestPFD.out \
+    pfd-tests/ics245-RunPFD.in   \
+    pfd-tests/ics245-RunPFD.out  \
+    pfd-tests/ics245-TestPFD.c++ \
+    pfd-tests/ics245-TestPFD.out \
     PFD.c++                       \
     PFD.h                         \
     PFD.log                       \

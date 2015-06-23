@@ -35,19 +35,23 @@ int pfd_read_first (const string& s);
  */
 list<int> pfd_read_rest (const string& s);
 
-//-------
+//---------------
 // build_adj_list
-//----------
+//---------------
 
+/**
+ * build adjacency list of successors
+ * @param vals a list of ints containing a node and its dependencies
+ * @return the amount of lists that were updated
+ */
 int build_adj_list (list<int> vals);
 // ------------
 // pfd_eval
 // ------------
 
 /**
- * @param i the beginning of the range, inclusive
- * @param j the end       of the range, inclusive
- * @return the max cycle length of the range [i, j]
+ * Find nodes that have no more dependencies
+ * @return the next node to work on
  */
 int pfd_eval ();
 
@@ -55,6 +59,11 @@ int pfd_eval ();
 // update
 // ------------
 
+/**
+ * Decrement dependencies
+ * @param node the current node we are working on
+ * @return the node we are working on
+ */
 int pfd_update_tasks_list(int node);
 // -------------
 // pfd_print
@@ -63,9 +72,7 @@ int pfd_update_tasks_list(int node);
 /**
  * print three ints
  * @param w an ostream
- * @param i the beginning of the range, inclusive
- * @param j the end       of the range, inclusive
- * @param v the max cycle length
+ * @param l a list of ints representing the order of execution
  */
 void pfd_print (ostream& w, list<int> l);
 
@@ -74,30 +81,11 @@ void pfd_print (ostream& w, list<int> l);
 // -------------
 
 /**
+ * Take in a list of dependencies and output execution order
  * @param r an istream
  * @param w an ostream
  */
 void pfd_solve (istream& r, ostream& w);
-
-
-// ------------
-// pfd_cycle_length
-// -----------
-/**
- * @param i an int
- * @return the cycle length of int i
- */
-int pfd_cycle_length (int i);
-
-// ------------
-// pfd_maxcl
-// ------------
-/**
- * @param i an int at beginning of range, inclusive
- * @param j an int at end of range, inclusive
- * @return max cycle length from [i, j]
- */
-int pfd_maxcl (int i, int j);
 
 #endif 
 // PFD_h

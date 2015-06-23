@@ -638,9 +638,9 @@ call    0 returned 100%
         -:  544:       *  element order.
         -:  545:       */
         -:  546:      const_iterator
-function _ZNKSt6vectorIiSaIiEE5beginEv called 13 returned 100% blocks executed 100%
-       13:  547:      begin() const _GLIBCXX_NOEXCEPT
-       13:  548:      { return const_iterator(this->_M_impl._M_start); }
+function _ZNKSt6vectorIiSaIiEE5beginEv called 20 returned 100% blocks executed 100%
+       20:  547:      begin() const _GLIBCXX_NOEXCEPT
+       20:  548:      { return const_iterator(this->_M_impl._M_start); }
 call    0 returned 100%
         -:  549:
         -:  550:      /**
@@ -660,9 +660,9 @@ call    0 returned 100%
         -:  562:       *  ordinary element order.
         -:  563:       */
         -:  564:      const_iterator
-function _ZNKSt6vectorIiSaIiEE3endEv called 7 returned 100% blocks executed 100%
-        7:  565:      end() const _GLIBCXX_NOEXCEPT
-        7:  566:      { return const_iterator(this->_M_impl._M_finish); }
+function _ZNKSt6vectorIiSaIiEE3endEv called 14 returned 100% blocks executed 100%
+       14:  565:      end() const _GLIBCXX_NOEXCEPT
+       14:  566:      { return const_iterator(this->_M_impl._M_finish); }
 call    0 returned 100%
         -:  567:
         -:  568:      /**
@@ -742,10 +742,10 @@ call    0 returned 100%
         -:  642:      // [23.2.4.2] capacity
         -:  643:      /**  Returns the number of elements in the %vector.  */
         -:  644:      size_type
-function _ZNKSt6vectorISt4listIiSaIiEESaIS2_EE4sizeEv called 2 returned 100% blocks executed 100%
-function _ZNKSt6vectorIiSaIiEE4sizeEv called 69 returned 100% blocks executed 100%
-       71:  645:      size() const _GLIBCXX_NOEXCEPT
-       71:  646:      { return size_type(this->_M_impl._M_finish - this->_M_impl._M_start); }
+function _ZNKSt6vectorISt4listIiSaIiEESaIS2_EE4sizeEv called 10 returned 100% blocks executed 100%
+function _ZNKSt6vectorIiSaIiEE4sizeEv called 70 returned 100% blocks executed 100%
+       80:  645:      size() const _GLIBCXX_NOEXCEPT
+       80:  646:      { return size_type(this->_M_impl._M_finish - this->_M_impl._M_start); }
         -:  647:
         -:  648:      /**  Returns the size() of the largest possible %vector.  */
         -:  649:      size_type
@@ -859,9 +859,9 @@ call    1 returned 100%
         -:  731:       *  equal end().)
         -:  732:       */
         -:  733:      bool
-function _ZNKSt6vectorIiSaIiEE5emptyEv called 7 returned 100% blocks executed 100%
-        7:  734:      empty() const _GLIBCXX_NOEXCEPT
-        7:  735:      { return begin() == end(); }
+function _ZNKSt6vectorIiSaIiEE5emptyEv called 14 returned 100% blocks executed 100%
+       14:  734:      empty() const _GLIBCXX_NOEXCEPT
+       14:  735:      { return begin() == end(); }
 call    0 returned 100%
 call    1 returned 100%
 call    2 returned 100%
@@ -899,10 +899,10 @@ call    2 returned 100%
         -:  767:       *  see at().)
         -:  768:       */
         -:  769:      reference
-function _ZNSt6vectorISt4listIiSaIiEESaIS2_EEixEm called 32 returned 100% blocks executed 100%
-function _ZNSt6vectorIiSaIiEEixEm called 370 returned 100% blocks executed 100%
-      402:  770:      operator[](size_type __n)
-      402:  771:      { return *(this->_M_impl._M_start + __n); }
+function _ZNSt6vectorISt4listIiSaIiEESaIS2_EEixEm called 40 returned 100% blocks executed 100%
+function _ZNSt6vectorIiSaIiEEixEm called 374 returned 100% blocks executed 100%
+      414:  770:      operator[](size_type __n)
+      414:  771:      { return *(this->_M_impl._M_start + __n); }
         -:  772:
         -:  773:      /**
         -:  774:       *  @brief  Subscript access to the data contained in the %vector.

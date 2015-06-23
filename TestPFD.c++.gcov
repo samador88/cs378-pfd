@@ -153,16 +153,12 @@ branch 25 taken 0%
 call   26 never executed
 call   27 never executed
 call   28 never executed
-        -:   36:    
-        -:   37:// ----
-        -:   38:// read_first
-        -:   39:// ----
-        -:   40:
-function _ZN26PFDFixture_read_first_TestD0Ev called 1 returned 100% blocks executed 100%
-function _ZN26PFDFixture_read_first_TestD2Ev called 1 returned 100% blocks executed 75%
-function _ZN26PFDFixture_read_first_Test8TestBodyEv called 1 returned 100% blocks executed 46%
-function _ZN26PFDFixture_read_first_TestC2Ev called 1 returned 100% blocks executed 100%
-        5:   41:TEST(PFDFixture, read_first) {
+        -:   36:
+function _ZN23PFDFixture_update2_TestD0Ev called 1 returned 100% blocks executed 100%
+function _ZN23PFDFixture_update2_TestD2Ev called 1 returned 100% blocks executed 75%
+function _ZN23PFDFixture_update2_Test8TestBodyEv called 1 returned 100% blocks executed 41%
+function _ZN23PFDFixture_update2_TestC2Ev called 1 returned 100% blocks executed 100%
+        5:   37:TEST(PFDFixture, update2) {
 call    0 returned 100%
 call    1 returned 100%
 call    2 returned 100%
@@ -174,284 +170,19 @@ branch  7 taken 0% (fallthrough)
 branch  8 taken 100%
 call    9 never executed
 call   10 returned 100%
-        1:   42:    string s("5 4\n");
-call    0 returned 100%
-call    1 returned 100%
-branch  2 taken 100% (fallthrough)
-branch  3 taken 0% (throw)
-call    4 returned 100%
-        1:   43:    const int p = pfd_read_first(s);
+        1:   38:    ASSERT_EQ(pfd_update_tasks_list(1), 1);}
 call    0 returned 100%
 branch  1 taken 100% (fallthrough)
 branch  2 taken 0% (throw)
-        1:   44:    ASSERT_EQ( 4, p);}
-call    0 returned 100%
-branch  1 taken 100% (fallthrough)
-branch  2 taken 0% (throw)
-call    3 returned 100%
-branch  4 taken 0% (fallthrough)
-branch  5 taken 100%
-call    6 never executed
-branch  7 never executed
-branch  8 never executed
-call    9 never executed
-branch 10 never executed
-branch 11 never executed
-call   12 never executed
-branch 13 never executed
-branch 14 never executed
-call   15 never executed
-branch 16 never executed
-branch 17 never executed
-call   18 never executed
-call   19 never executed
-call   20 returned 100%
-branch 21 taken 100%
-branch 22 taken 0%
-call   23 returned 100%
-branch 24 taken 100%
-branch 25 taken 0%
-call   26 never executed
-call   27 never executed
-call   28 never executed
-call   29 never executed
-call   30 never executed
-        -:   45:
-function _ZN27PFDFixture_read_first2_TestD0Ev called 1 returned 100% blocks executed 100%
-function _ZN27PFDFixture_read_first2_TestD2Ev called 1 returned 100% blocks executed 75%
-function _ZN27PFDFixture_read_first2_Test8TestBodyEv called 1 returned 100% blocks executed 46%
-function _ZN27PFDFixture_read_first2_TestC2Ev called 1 returned 100% blocks executed 100%
-        5:   46:TEST(PFDFixture, read_first2) {
-call    0 returned 100%
-call    1 returned 100%
-call    2 returned 100%
-call    3 returned 100%
-call    4 returned 100%
-call    5 returned 100%
-call    6 returned 100%
-branch  7 taken 0% (fallthrough)
-branch  8 taken 100%
-call    9 never executed
-call   10 returned 100%
-        1:   47:    string s("100 200\n");
-call    0 returned 100%
-call    1 returned 100%
-branch  2 taken 100% (fallthrough)
-branch  3 taken 0% (throw)
-call    4 returned 100%
-        1:   48:    const int p = pfd_read_first(s);
-call    0 returned 100%
-branch  1 taken 100% (fallthrough)
-branch  2 taken 0% (throw)
-        1:   49:    ASSERT_EQ(200, p);}
-call    0 returned 100%
-branch  1 taken 100% (fallthrough)
-branch  2 taken 0% (throw)
-call    3 returned 100%
-branch  4 taken 0% (fallthrough)
-branch  5 taken 100%
-call    6 never executed
-branch  7 never executed
-branch  8 never executed
-call    9 never executed
-branch 10 never executed
-branch 11 never executed
-call   12 never executed
-branch 13 never executed
-branch 14 never executed
-call   15 never executed
-branch 16 never executed
-branch 17 never executed
-call   18 never executed
-call   19 never executed
-call   20 returned 100%
-branch 21 taken 100%
-branch 22 taken 0%
-call   23 returned 100%
-branch 24 taken 100%
-branch 25 taken 0%
-call   26 never executed
-call   27 never executed
-call   28 never executed
-call   29 never executed
-call   30 never executed
-        -:   50:
-function _ZN27PFDFixture_read_first3_TestD0Ev called 1 returned 100% blocks executed 100%
-function _ZN27PFDFixture_read_first3_TestD2Ev called 1 returned 100% blocks executed 75%
-function _ZN27PFDFixture_read_first3_Test8TestBodyEv called 1 returned 100% blocks executed 46%
-function _ZN27PFDFixture_read_first3_TestC2Ev called 1 returned 100% blocks executed 100%
-        5:   51:TEST(PFDFixture, read_first3) {
-call    0 returned 100%
-call    1 returned 100%
-call    2 returned 100%
-call    3 returned 100%
-call    4 returned 100%
-call    5 returned 100%
-call    6 returned 100%
-branch  7 taken 0% (fallthrough)
-branch  8 taken 100%
-call    9 never executed
-call   10 returned 100%
-        1:   52:    string s("201 210\n");
-call    0 returned 100%
-call    1 returned 100%
-branch  2 taken 100% (fallthrough)
-branch  3 taken 0% (throw)
-call    4 returned 100%
-        1:   53:    const int p = pfd_read_first(s);
-call    0 returned 100%
-branch  1 taken 100% (fallthrough)
-branch  2 taken 0% (throw)
-        1:   54:    ASSERT_EQ(210, p);}
-call    0 returned 100%
-branch  1 taken 100% (fallthrough)
-branch  2 taken 0% (throw)
-call    3 returned 100%
-branch  4 taken 0% (fallthrough)
-branch  5 taken 100%
-call    6 never executed
-branch  7 never executed
-branch  8 never executed
-call    9 never executed
-branch 10 never executed
-branch 11 never executed
-call   12 never executed
-branch 13 never executed
-branch 14 never executed
-call   15 never executed
-branch 16 never executed
-branch 17 never executed
-call   18 never executed
-call   19 never executed
-call   20 returned 100%
-branch 21 taken 100%
-branch 22 taken 0%
-call   23 returned 100%
-branch 24 taken 100%
-branch 25 taken 0%
-call   26 never executed
-call   27 never executed
-call   28 never executed
-call   29 never executed
-call   30 never executed
-        -:   55:
-function _ZN27PFDFixture_read_first4_TestD0Ev called 1 returned 100% blocks executed 100%
-function _ZN27PFDFixture_read_first4_TestD2Ev called 1 returned 100% blocks executed 75%
-function _ZN27PFDFixture_read_first4_Test8TestBodyEv called 1 returned 100% blocks executed 46%
-function _ZN27PFDFixture_read_first4_TestC2Ev called 1 returned 100% blocks executed 100%
-        5:   56:TEST(PFDFixture, read_first4)   {
-call    0 returned 100%
-call    1 returned 100%
-call    2 returned 100%
-call    3 returned 100%
-call    4 returned 100%
-call    5 returned 100%
-call    6 returned 100%
-branch  7 taken 0% (fallthrough)
-branch  8 taken 100%
-call    9 never executed
-call   10 returned 100%
-        1:   57:    string s("1 999999\n");
-call    0 returned 100%
-call    1 returned 100%
-branch  2 taken 100% (fallthrough)
-branch  3 taken 0% (throw)
-call    4 returned 100%
-        1:   58:    const int p = pfd_read_first(s);
-call    0 returned 100%
-branch  1 taken 100% (fallthrough)
-branch  2 taken 0% (throw)
-        1:   59:    ASSERT_EQ(999999, p);}
-call    0 returned 100%
-branch  1 taken 100% (fallthrough)
-branch  2 taken 0% (throw)
-call    3 returned 100%
-branch  4 taken 0% (fallthrough)
-branch  5 taken 100%
-call    6 never executed
-branch  7 never executed
-branch  8 never executed
-call    9 never executed
-branch 10 never executed
-branch 11 never executed
-call   12 never executed
-branch 13 never executed
-branch 14 never executed
-call   15 never executed
-branch 16 never executed
-branch 17 never executed
-call   18 never executed
-call   19 never executed
-call   20 returned 100%
-branch 21 taken 100%
-branch 22 taken 0%
-call   23 returned 100%
-branch 24 taken 100%
-branch 25 taken 0%
-call   26 never executed
-call   27 never executed
-call   28 never executed
-call   29 never executed
-call   30 never executed
-        -:   60:
-        -:   61:// ----
-        -:   62:// read_rest
-        -:   63:// ----
-        -:   64:
-function _ZN25PFDFixture_read_rest_TestD0Ev called 1 returned 100% blocks executed 100%
-function _ZN25PFDFixture_read_rest_TestD2Ev called 1 returned 100% blocks executed 75%
-function _ZN25PFDFixture_read_rest_Test8TestBodyEv called 1 returned 100% blocks executed 51%
-function _ZN25PFDFixture_read_rest_TestC2Ev called 1 returned 100% blocks executed 100%
-        5:   65:TEST(PFDFixture, read_rest) {
-call    0 returned 100%
-call    1 returned 100%
-call    2 returned 100%
-call    3 returned 100%
-call    4 returned 100%
-call    5 returned 100%
-call    6 returned 100%
-branch  7 taken 0% (fallthrough)
-branch  8 taken 100%
-call    9 never executed
-call   10 returned 100%
-        1:   66:    string s("3 2 1 5\n");
-call    0 returned 100%
-call    1 returned 100%
-branch  2 taken 100% (fallthrough)
-branch  3 taken 0% (throw)
-call    4 returned 100%
-call    5 never executed
-        2:   67:    list<int> q = {3, 2, 1, 5};
-call    0 returned 100%
-call    1 returned 100%
-branch  2 taken 100% (fallthrough)
-branch  3 taken 0% (throw)
-call    4 returned 100%
-call    5 returned 100%
-branch  6 taken 100%
-branch  7 taken 0%
-call    8 never executed
-        2:   68:    const list<int> p = pfd_read_rest(s);
-call    0 returned 100%
-branch  1 taken 100% (fallthrough)
-branch  2 taken 0% (throw)
-call    3 returned 100%
-branch  4 taken 100%
-branch  5 taken 0%
-call    6 never executed
-        2:   69:    ASSERT_TRUE(equal(q.begin(), q.end(), p.begin()));}
-call    0 returned 100%
-call    1 returned 100%
-call    2 returned 100%
 call    3 returned 100%
 branch  4 taken 100% (fallthrough)
 branch  5 taken 0% (throw)
 call    6 returned 100%
-branch  7 taken 100% (fallthrough)
-branch  8 taken 0% (throw)
-call    9 returned 100%
-branch 10 taken 0% (fallthrough)
-branch 11 taken 100%
+branch  7 taken 0% (fallthrough)
+branch  8 taken 100%
+call    9 never executed
+branch 10 never executed
+branch 11 never executed
 call   12 never executed
 branch 13 never executed
 branch 14 never executed
@@ -459,33 +190,22 @@ call   15 never executed
 branch 16 never executed
 branch 17 never executed
 call   18 never executed
-call   19 never executed
+branch 19 never executed
 branch 20 never executed
-branch 21 never executed
+call   21 never executed
 call   22 never executed
-branch 23 never executed
-branch 24 never executed
-call   25 never executed
+call   23 returned 100%
+branch 24 taken 100%
+branch 25 taken 0%
 call   26 never executed
 call   27 never executed
-call   28 returned 100%
-branch 29 taken 100%
-branch 30 taken 0%
-call   31 returned 100%
-branch 32 taken 100%
-branch 33 taken 0%
-call   34 never executed
-call   35 never executed
-call   36 never executed
-call   37 never executed
-call   38 never executed
-call   39 never executed
-        -:   70:
-function _ZN26PFDFixture_read_rest2_TestD0Ev called 1 returned 100% blocks executed 100%
-function _ZN26PFDFixture_read_rest2_TestD2Ev called 1 returned 100% blocks executed 75%
-function _ZN26PFDFixture_read_rest2_Test8TestBodyEv called 1 returned 100% blocks executed 51%
-function _ZN26PFDFixture_read_rest2_TestC2Ev called 1 returned 100% blocks executed 100%
-        5:   71:TEST(PFDFixture, read_rest2) {
+call   28 never executed
+        -:   39:
+function _ZN23PFDFixture_update3_TestD0Ev called 1 returned 100% blocks executed 100%
+function _ZN23PFDFixture_update3_TestD2Ev called 1 returned 100% blocks executed 75%
+function _ZN23PFDFixture_update3_Test8TestBodyEv called 1 returned 100% blocks executed 41%
+function _ZN23PFDFixture_update3_TestC2Ev called 1 returned 100% blocks executed 100%
+        5:   40:TEST(PFDFixture, update3) {
 call    0 returned 100%
 call    1 returned 100%
 call    2 returned 100%
@@ -497,14 +217,305 @@ branch  7 taken 0% (fallthrough)
 branch  8 taken 100%
 call    9 never executed
 call   10 returned 100%
-        1:   72:    string s("2 2 5 3\n");
+        1:   41:    ASSERT_EQ(pfd_update_tasks_list(5), 5);}
+call    0 returned 100%
+branch  1 taken 100% (fallthrough)
+branch  2 taken 0% (throw)
+call    3 returned 100%
+branch  4 taken 100% (fallthrough)
+branch  5 taken 0% (throw)
+call    6 returned 100%
+branch  7 taken 0% (fallthrough)
+branch  8 taken 100%
+call    9 never executed
+branch 10 never executed
+branch 11 never executed
+call   12 never executed
+branch 13 never executed
+branch 14 never executed
+call   15 never executed
+branch 16 never executed
+branch 17 never executed
+call   18 never executed
+branch 19 never executed
+branch 20 never executed
+call   21 never executed
+call   22 never executed
+call   23 returned 100%
+branch 24 taken 100%
+branch 25 taken 0%
+call   26 never executed
+call   27 never executed
+call   28 never executed
+        -:   42:    
+        -:   43:// ----
+        -:   44:// read_first
+        -:   45:// ----
+        -:   46:
+function _ZN26PFDFixture_read_first_TestD0Ev called 1 returned 100% blocks executed 100%
+function _ZN26PFDFixture_read_first_TestD2Ev called 1 returned 100% blocks executed 75%
+function _ZN26PFDFixture_read_first_Test8TestBodyEv called 1 returned 100% blocks executed 46%
+function _ZN26PFDFixture_read_first_TestC2Ev called 1 returned 100% blocks executed 100%
+        5:   47:TEST(PFDFixture, read_first) {
+call    0 returned 100%
+call    1 returned 100%
+call    2 returned 100%
+call    3 returned 100%
+call    4 returned 100%
+call    5 returned 100%
+call    6 returned 100%
+branch  7 taken 0% (fallthrough)
+branch  8 taken 100%
+call    9 never executed
+call   10 returned 100%
+        1:   48:    string s("5 4\n");
+call    0 returned 100%
+call    1 returned 100%
+branch  2 taken 100% (fallthrough)
+branch  3 taken 0% (throw)
+call    4 returned 100%
+        1:   49:    const int p = pfd_read_first(s);
+call    0 returned 100%
+branch  1 taken 100% (fallthrough)
+branch  2 taken 0% (throw)
+        1:   50:    ASSERT_EQ( 4, p);}
+call    0 returned 100%
+branch  1 taken 100% (fallthrough)
+branch  2 taken 0% (throw)
+call    3 returned 100%
+branch  4 taken 0% (fallthrough)
+branch  5 taken 100%
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+call    9 never executed
+branch 10 never executed
+branch 11 never executed
+call   12 never executed
+branch 13 never executed
+branch 14 never executed
+call   15 never executed
+branch 16 never executed
+branch 17 never executed
+call   18 never executed
+call   19 never executed
+call   20 returned 100%
+branch 21 taken 100%
+branch 22 taken 0%
+call   23 returned 100%
+branch 24 taken 100%
+branch 25 taken 0%
+call   26 never executed
+call   27 never executed
+call   28 never executed
+call   29 never executed
+call   30 never executed
+        -:   51:
+function _ZN27PFDFixture_read_first2_TestD0Ev called 1 returned 100% blocks executed 100%
+function _ZN27PFDFixture_read_first2_TestD2Ev called 1 returned 100% blocks executed 75%
+function _ZN27PFDFixture_read_first2_Test8TestBodyEv called 1 returned 100% blocks executed 46%
+function _ZN27PFDFixture_read_first2_TestC2Ev called 1 returned 100% blocks executed 100%
+        5:   52:TEST(PFDFixture, read_first2) {
+call    0 returned 100%
+call    1 returned 100%
+call    2 returned 100%
+call    3 returned 100%
+call    4 returned 100%
+call    5 returned 100%
+call    6 returned 100%
+branch  7 taken 0% (fallthrough)
+branch  8 taken 100%
+call    9 never executed
+call   10 returned 100%
+        1:   53:    string s("100 200\n");
+call    0 returned 100%
+call    1 returned 100%
+branch  2 taken 100% (fallthrough)
+branch  3 taken 0% (throw)
+call    4 returned 100%
+        1:   54:    const int p = pfd_read_first(s);
+call    0 returned 100%
+branch  1 taken 100% (fallthrough)
+branch  2 taken 0% (throw)
+        1:   55:    ASSERT_EQ(200, p);}
+call    0 returned 100%
+branch  1 taken 100% (fallthrough)
+branch  2 taken 0% (throw)
+call    3 returned 100%
+branch  4 taken 0% (fallthrough)
+branch  5 taken 100%
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+call    9 never executed
+branch 10 never executed
+branch 11 never executed
+call   12 never executed
+branch 13 never executed
+branch 14 never executed
+call   15 never executed
+branch 16 never executed
+branch 17 never executed
+call   18 never executed
+call   19 never executed
+call   20 returned 100%
+branch 21 taken 100%
+branch 22 taken 0%
+call   23 returned 100%
+branch 24 taken 100%
+branch 25 taken 0%
+call   26 never executed
+call   27 never executed
+call   28 never executed
+call   29 never executed
+call   30 never executed
+        -:   56:
+function _ZN27PFDFixture_read_first3_TestD0Ev called 1 returned 100% blocks executed 100%
+function _ZN27PFDFixture_read_first3_TestD2Ev called 1 returned 100% blocks executed 75%
+function _ZN27PFDFixture_read_first3_Test8TestBodyEv called 1 returned 100% blocks executed 46%
+function _ZN27PFDFixture_read_first3_TestC2Ev called 1 returned 100% blocks executed 100%
+        5:   57:TEST(PFDFixture, read_first3) {
+call    0 returned 100%
+call    1 returned 100%
+call    2 returned 100%
+call    3 returned 100%
+call    4 returned 100%
+call    5 returned 100%
+call    6 returned 100%
+branch  7 taken 0% (fallthrough)
+branch  8 taken 100%
+call    9 never executed
+call   10 returned 100%
+        1:   58:    string s("201 210\n");
+call    0 returned 100%
+call    1 returned 100%
+branch  2 taken 100% (fallthrough)
+branch  3 taken 0% (throw)
+call    4 returned 100%
+        1:   59:    const int p = pfd_read_first(s);
+call    0 returned 100%
+branch  1 taken 100% (fallthrough)
+branch  2 taken 0% (throw)
+        1:   60:    ASSERT_EQ(210, p);}
+call    0 returned 100%
+branch  1 taken 100% (fallthrough)
+branch  2 taken 0% (throw)
+call    3 returned 100%
+branch  4 taken 0% (fallthrough)
+branch  5 taken 100%
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+call    9 never executed
+branch 10 never executed
+branch 11 never executed
+call   12 never executed
+branch 13 never executed
+branch 14 never executed
+call   15 never executed
+branch 16 never executed
+branch 17 never executed
+call   18 never executed
+call   19 never executed
+call   20 returned 100%
+branch 21 taken 100%
+branch 22 taken 0%
+call   23 returned 100%
+branch 24 taken 100%
+branch 25 taken 0%
+call   26 never executed
+call   27 never executed
+call   28 never executed
+call   29 never executed
+call   30 never executed
+        -:   61:
+function _ZN27PFDFixture_read_first4_TestD0Ev called 1 returned 100% blocks executed 100%
+function _ZN27PFDFixture_read_first4_TestD2Ev called 1 returned 100% blocks executed 75%
+function _ZN27PFDFixture_read_first4_Test8TestBodyEv called 1 returned 100% blocks executed 46%
+function _ZN27PFDFixture_read_first4_TestC2Ev called 1 returned 100% blocks executed 100%
+        5:   62:TEST(PFDFixture, read_first4)   {
+call    0 returned 100%
+call    1 returned 100%
+call    2 returned 100%
+call    3 returned 100%
+call    4 returned 100%
+call    5 returned 100%
+call    6 returned 100%
+branch  7 taken 0% (fallthrough)
+branch  8 taken 100%
+call    9 never executed
+call   10 returned 100%
+        1:   63:    string s("1 999999\n");
+call    0 returned 100%
+call    1 returned 100%
+branch  2 taken 100% (fallthrough)
+branch  3 taken 0% (throw)
+call    4 returned 100%
+        1:   64:    const int p = pfd_read_first(s);
+call    0 returned 100%
+branch  1 taken 100% (fallthrough)
+branch  2 taken 0% (throw)
+        1:   65:    ASSERT_EQ(999999, p);}
+call    0 returned 100%
+branch  1 taken 100% (fallthrough)
+branch  2 taken 0% (throw)
+call    3 returned 100%
+branch  4 taken 0% (fallthrough)
+branch  5 taken 100%
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+call    9 never executed
+branch 10 never executed
+branch 11 never executed
+call   12 never executed
+branch 13 never executed
+branch 14 never executed
+call   15 never executed
+branch 16 never executed
+branch 17 never executed
+call   18 never executed
+call   19 never executed
+call   20 returned 100%
+branch 21 taken 100%
+branch 22 taken 0%
+call   23 returned 100%
+branch 24 taken 100%
+branch 25 taken 0%
+call   26 never executed
+call   27 never executed
+call   28 never executed
+call   29 never executed
+call   30 never executed
+        -:   66:
+        -:   67:// ----
+        -:   68:// read_rest
+        -:   69:// ----
+        -:   70:
+function _ZN25PFDFixture_read_rest_TestD0Ev called 1 returned 100% blocks executed 100%
+function _ZN25PFDFixture_read_rest_TestD2Ev called 1 returned 100% blocks executed 75%
+function _ZN25PFDFixture_read_rest_Test8TestBodyEv called 1 returned 100% blocks executed 51%
+function _ZN25PFDFixture_read_rest_TestC2Ev called 1 returned 100% blocks executed 100%
+        5:   71:TEST(PFDFixture, read_rest) {
+call    0 returned 100%
+call    1 returned 100%
+call    2 returned 100%
+call    3 returned 100%
+call    4 returned 100%
+call    5 returned 100%
+call    6 returned 100%
+branch  7 taken 0% (fallthrough)
+branch  8 taken 100%
+call    9 never executed
+call   10 returned 100%
+        1:   72:    string s("3 2 1 5\n");
 call    0 returned 100%
 call    1 returned 100%
 branch  2 taken 100% (fallthrough)
 branch  3 taken 0% (throw)
 call    4 returned 100%
 call    5 never executed
-        2:   73:    list<int> q = {2, 2, 5, 3};
+        2:   73:    list<int> q = {3, 2, 1, 5};
 call    0 returned 100%
 call    1 returned 100%
 branch  2 taken 100% (fallthrough)
@@ -564,12 +575,95 @@ call   37 never executed
 call   38 never executed
 call   39 never executed
         -:   76:
-        -:   77:
+function _ZN26PFDFixture_read_rest2_TestD0Ev called 1 returned 100% blocks executed 100%
+function _ZN26PFDFixture_read_rest2_TestD2Ev called 1 returned 100% blocks executed 75%
+function _ZN26PFDFixture_read_rest2_Test8TestBodyEv called 1 returned 100% blocks executed 51%
+function _ZN26PFDFixture_read_rest2_TestC2Ev called 1 returned 100% blocks executed 100%
+        5:   77:TEST(PFDFixture, read_rest2) {
+call    0 returned 100%
+call    1 returned 100%
+call    2 returned 100%
+call    3 returned 100%
+call    4 returned 100%
+call    5 returned 100%
+call    6 returned 100%
+branch  7 taken 0% (fallthrough)
+branch  8 taken 100%
+call    9 never executed
+call   10 returned 100%
+        1:   78:    string s("2 2 5 3\n");
+call    0 returned 100%
+call    1 returned 100%
+branch  2 taken 100% (fallthrough)
+branch  3 taken 0% (throw)
+call    4 returned 100%
+call    5 never executed
+        2:   79:    list<int> q = {2, 2, 5, 3};
+call    0 returned 100%
+call    1 returned 100%
+branch  2 taken 100% (fallthrough)
+branch  3 taken 0% (throw)
+call    4 returned 100%
+call    5 returned 100%
+branch  6 taken 100%
+branch  7 taken 0%
+call    8 never executed
+        2:   80:    const list<int> p = pfd_read_rest(s);
+call    0 returned 100%
+branch  1 taken 100% (fallthrough)
+branch  2 taken 0% (throw)
+call    3 returned 100%
+branch  4 taken 100%
+branch  5 taken 0%
+call    6 never executed
+        2:   81:    ASSERT_TRUE(equal(q.begin(), q.end(), p.begin()));}
+call    0 returned 100%
+call    1 returned 100%
+call    2 returned 100%
+call    3 returned 100%
+branch  4 taken 100% (fallthrough)
+branch  5 taken 0% (throw)
+call    6 returned 100%
+branch  7 taken 100% (fallthrough)
+branch  8 taken 0% (throw)
+call    9 returned 100%
+branch 10 taken 0% (fallthrough)
+branch 11 taken 100%
+call   12 never executed
+branch 13 never executed
+branch 14 never executed
+call   15 never executed
+branch 16 never executed
+branch 17 never executed
+call   18 never executed
+call   19 never executed
+branch 20 never executed
+branch 21 never executed
+call   22 never executed
+branch 23 never executed
+branch 24 never executed
+call   25 never executed
+call   26 never executed
+call   27 never executed
+call   28 returned 100%
+branch 29 taken 100%
+branch 30 taken 0%
+call   31 returned 100%
+branch 32 taken 100%
+branch 33 taken 0%
+call   34 never executed
+call   35 never executed
+call   36 never executed
+call   37 never executed
+call   38 never executed
+call   39 never executed
+        -:   82:
+        -:   83:
 function _ZN26PFDFixture_read_rest3_TestD0Ev called 1 returned 100% blocks executed 100%
 function _ZN26PFDFixture_read_rest3_TestD2Ev called 1 returned 100% blocks executed 75%
 function _ZN26PFDFixture_read_rest3_Test8TestBodyEv called 1 returned 100% blocks executed 51%
 function _ZN26PFDFixture_read_rest3_TestC2Ev called 1 returned 100% blocks executed 100%
-        5:   78:TEST(PFDFixture, read_rest3) {
+        5:   84:TEST(PFDFixture, read_rest3) {
 call    0 returned 100%
 call    1 returned 100%
 call    2 returned 100%
@@ -581,14 +675,14 @@ branch  7 taken 0% (fallthrough)
 branch  8 taken 100%
 call    9 never executed
 call   10 returned 100%
-        1:   79:    string s("4 1 3\n");
+        1:   85:    string s("4 1 3\n");
 call    0 returned 100%
 call    1 returned 100%
 branch  2 taken 100% (fallthrough)
 branch  3 taken 0% (throw)
 call    4 returned 100%
 call    5 never executed
-        2:   80:    list<int> q = {4, 1, 3};
+        2:   86:    list<int> q = {4, 1, 3};
 call    0 returned 100%
 call    1 returned 100%
 branch  2 taken 100% (fallthrough)
@@ -598,7 +692,7 @@ call    5 returned 100%
 branch  6 taken 100%
 branch  7 taken 0%
 call    8 never executed
-        2:   81:    const list<int> p = pfd_read_rest(s);
+        2:   87:    const list<int> p = pfd_read_rest(s);
 call    0 returned 100%
 branch  1 taken 100% (fallthrough)
 branch  2 taken 0% (throw)
@@ -606,7 +700,7 @@ call    3 returned 100%
 branch  4 taken 100%
 branch  5 taken 0%
 call    6 never executed
-        2:   82:    ASSERT_TRUE(equal(q.begin(), q.end(), p.begin()));}
+        2:   88:    ASSERT_TRUE(equal(q.begin(), q.end(), p.begin()));}
 call    0 returned 100%
 call    1 returned 100%
 call    2 returned 100%
@@ -647,13 +741,13 @@ call   36 never executed
 call   37 never executed
 call   38 never executed
 call   39 never executed
-        -:   83:
-        -:   84:
+        -:   89:
+        -:   90:
 function _ZN26PFDFixture_read_rest4_TestD0Ev called 1 returned 100% blocks executed 100%
 function _ZN26PFDFixture_read_rest4_TestD2Ev called 1 returned 100% blocks executed 75%
 function _ZN26PFDFixture_read_rest4_Test8TestBodyEv called 1 returned 100% blocks executed 51%
 function _ZN26PFDFixture_read_rest4_TestC2Ev called 1 returned 100% blocks executed 100%
-        5:   85:TEST(PFDFixture, read_rest4)   {
+        5:   91:TEST(PFDFixture, read_rest4)   {
 call    0 returned 100%
 call    1 returned 100%
 call    2 returned 100%
@@ -665,14 +759,14 @@ branch  7 taken 0% (fallthrough)
 branch  8 taken 100%
 call    9 never executed
 call   10 returned 100%
-        1:   86:    string s("5 1 1\n");
+        1:   92:    string s("5 1 1\n");
 call    0 returned 100%
 call    1 returned 100%
 branch  2 taken 100% (fallthrough)
 branch  3 taken 0% (throw)
 call    4 returned 100%
 call    5 never executed
-        2:   87:    list<int> q = {5, 1, 1};
+        2:   93:    list<int> q = {5, 1, 1};
 call    0 returned 100%
 call    1 returned 100%
 branch  2 taken 100% (fallthrough)
@@ -682,7 +776,7 @@ call    5 returned 100%
 branch  6 taken 100%
 branch  7 taken 0%
 call    8 never executed
-        2:   88:    const list<int> p = pfd_read_rest(s);
+        2:   94:    const list<int> p = pfd_read_rest(s);
 call    0 returned 100%
 branch  1 taken 100% (fallthrough)
 branch  2 taken 0% (throw)
@@ -690,7 +784,7 @@ call    3 returned 100%
 branch  4 taken 100%
 branch  5 taken 0%
 call    6 never executed
-        2:   89:    ASSERT_TRUE(equal(q.begin(), q.end(), p.begin()));}
+        2:   95:    ASSERT_TRUE(equal(q.begin(), q.end(), p.begin()));}
 call    0 returned 100%
 call    1 returned 100%
 call    2 returned 100%
@@ -731,16 +825,16 @@ call   36 never executed
 call   37 never executed
 call   38 never executed
 call   39 never executed
-        -:   90:
-        -:   91:
-        -:   92://-------
-        -:   93:// build_adj_list
-        -:   94://----------
+        -:   96:
+        -:   97:
+        -:   98://-------
+        -:   99:// build_adj_list
+        -:  100://----------
 function _ZN25PFDFixture_build_adj_TestD0Ev called 1 returned 100% blocks executed 100%
 function _ZN25PFDFixture_build_adj_TestD2Ev called 1 returned 100% blocks executed 75%
 function _ZN25PFDFixture_build_adj_Test8TestBodyEv called 1 returned 100% blocks executed 47%
 function _ZN25PFDFixture_build_adj_TestC2Ev called 1 returned 100% blocks executed 100%
-        5:   95:TEST(PFDFixture, build_adj) {
+        5:  101:TEST(PFDFixture, build_adj) {
 call    0 returned 100%
 call    1 returned 100%
 call    2 returned 100%
@@ -752,13 +846,13 @@ branch  7 taken 0% (fallthrough)
 branch  8 taken 100%
 call    9 never executed
 call   10 returned 100%
-        1:   96:    list<int> q = {3, 2, 1, 5};
+        1:  102:    list<int> q = {3, 2, 1, 5};
 call    0 returned 100%
 call    1 returned 100%
 branch  2 taken 100% (fallthrough)
 branch  3 taken 0% (throw)
 call    4 returned 100%
-        1:   97:    const int p = build_adj_list(q);
+        1:  103:    const int p = build_adj_list(q);
 call    0 returned 100%
 branch  1 taken 100% (fallthrough)
 branch  2 taken 0% (throw)
@@ -767,7 +861,7 @@ branch  4 taken 100% (fallthrough)
 branch  5 taken 0% (throw)
 call    6 returned 100%
 call    7 never executed
-        1:   98:    ASSERT_EQ(2, p);}
+        1:  104:    ASSERT_EQ(2, p);}
 call    0 returned 100%
 branch  1 taken 100% (fallthrough)
 branch  2 taken 0% (throw)
@@ -799,12 +893,12 @@ call   27 never executed
 call   28 never executed
 call   29 never executed
 call   30 never executed
-        -:   99:
+        -:  105:
 function _ZN26PFDFixture_build_adj1_TestD0Ev called 1 returned 100% blocks executed 100%
 function _ZN26PFDFixture_build_adj1_TestD2Ev called 1 returned 100% blocks executed 75%
 function _ZN26PFDFixture_build_adj1_Test8TestBodyEv called 1 returned 100% blocks executed 47%
 function _ZN26PFDFixture_build_adj1_TestC2Ev called 1 returned 100% blocks executed 100%
-        5:  100:TEST(PFDFixture, build_adj1) {
+        5:  106:TEST(PFDFixture, build_adj1) {
 call    0 returned 100%
 call    1 returned 100%
 call    2 returned 100%
@@ -816,13 +910,13 @@ branch  7 taken 0% (fallthrough)
 branch  8 taken 100%
 call    9 never executed
 call   10 returned 100%
-        1:  101:    list<int> q = {2, 2, 5, 3};
+        1:  107:    list<int> q = {2, 2, 5, 3};
 call    0 returned 100%
 call    1 returned 100%
 branch  2 taken 100% (fallthrough)
 branch  3 taken 0% (throw)
 call    4 returned 100%
-        1:  102:    const int p = build_adj_list(q);
+        1:  108:    const int p = build_adj_list(q);
 call    0 returned 100%
 branch  1 taken 100% (fallthrough)
 branch  2 taken 0% (throw)
@@ -831,7 +925,7 @@ branch  4 taken 100% (fallthrough)
 branch  5 taken 0% (throw)
 call    6 returned 100%
 call    7 never executed
-        1:  103:    ASSERT_EQ(2, p);}
+        1:  109:    ASSERT_EQ(2, p);}
 call    0 returned 100%
 branch  1 taken 100% (fallthrough)
 branch  2 taken 0% (throw)
@@ -863,12 +957,12 @@ call   27 never executed
 call   28 never executed
 call   29 never executed
 call   30 never executed
-        -:  104:
+        -:  110:
 function _ZN26PFDFixture_build_adj2_TestD0Ev called 1 returned 100% blocks executed 100%
 function _ZN26PFDFixture_build_adj2_TestD2Ev called 1 returned 100% blocks executed 75%
 function _ZN26PFDFixture_build_adj2_Test8TestBodyEv called 1 returned 100% blocks executed 47%
 function _ZN26PFDFixture_build_adj2_TestC2Ev called 1 returned 100% blocks executed 100%
-        5:  105:TEST(PFDFixture, build_adj2) {
+        5:  111:TEST(PFDFixture, build_adj2) {
 call    0 returned 100%
 call    1 returned 100%
 call    2 returned 100%
@@ -880,13 +974,13 @@ branch  7 taken 0% (fallthrough)
 branch  8 taken 100%
 call    9 never executed
 call   10 returned 100%
-        1:  106:    list<int> q = {4, 1, 3};
+        1:  112:    list<int> q = {4, 1, 3};
 call    0 returned 100%
 call    1 returned 100%
 branch  2 taken 100% (fallthrough)
 branch  3 taken 0% (throw)
 call    4 returned 100%
-        1:  107:    const int p = build_adj_list(q);
+        1:  113:    const int p = build_adj_list(q);
 call    0 returned 100%
 branch  1 taken 100% (fallthrough)
 branch  2 taken 0% (throw)
@@ -895,7 +989,7 @@ branch  4 taken 100% (fallthrough)
 branch  5 taken 0% (throw)
 call    6 returned 100%
 call    7 never executed
-        1:  108:    ASSERT_EQ(1, p);}
+        1:  114:    ASSERT_EQ(1, p);}
 call    0 returned 100%
 branch  1 taken 100% (fallthrough)
 branch  2 taken 0% (throw)
@@ -927,12 +1021,12 @@ call   27 never executed
 call   28 never executed
 call   29 never executed
 call   30 never executed
-        -:  109:
+        -:  115:
 function _ZN26PFDFixture_build_adj3_TestD0Ev called 1 returned 100% blocks executed 100%
 function _ZN26PFDFixture_build_adj3_TestD2Ev called 1 returned 100% blocks executed 75%
 function _ZN26PFDFixture_build_adj3_Test8TestBodyEv called 1 returned 100% blocks executed 47%
 function _ZN26PFDFixture_build_adj3_TestC2Ev called 1 returned 100% blocks executed 100%
-        5:  110:TEST(PFDFixture, build_adj3)   {
+        5:  116:TEST(PFDFixture, build_adj3)   {
 call    0 returned 100%
 call    1 returned 100%
 call    2 returned 100%
@@ -944,13 +1038,13 @@ branch  7 taken 0% (fallthrough)
 branch  8 taken 100%
 call    9 never executed
 call   10 returned 100%
-        1:  111:    list<int> q = {5, 1, 1};
+        1:  117:    list<int> q = {5, 1, 1};
 call    0 returned 100%
 call    1 returned 100%
 branch  2 taken 100% (fallthrough)
 branch  3 taken 0% (throw)
 call    4 returned 100%
-        1:  112:    const int p = build_adj_list(q);
+        1:  118:    const int p = build_adj_list(q);
 call    0 returned 100%
 branch  1 taken 100% (fallthrough)
 branch  2 taken 0% (throw)
@@ -959,7 +1053,7 @@ branch  4 taken 100% (fallthrough)
 branch  5 taken 0% (throw)
 call    6 returned 100%
 call    7 never executed
-        1:  113:    ASSERT_EQ(1, p);} 
+        1:  119:    ASSERT_EQ(1, p);} 
 call    0 returned 100%
 branch  1 taken 100% (fallthrough)
 branch  2 taken 0% (throw)
@@ -991,16 +1085,16 @@ call   27 never executed
 call   28 never executed
 call   29 never executed
 call   30 never executed
-        -:  114:
-        -:  115:// ----
-        -:  116:// eval
-        -:  117:// ----
-        -:  118:
+        -:  120:
+        -:  121:// ----
+        -:  122:// eval
+        -:  123:// ----
+        -:  124:
 function _ZN22PFDFixture_eval_1_TestD0Ev called 1 returned 100% blocks executed 100%
 function _ZN22PFDFixture_eval_1_TestD2Ev called 1 returned 100% blocks executed 75%
 function _ZN22PFDFixture_eval_1_Test8TestBodyEv called 1 returned 100% blocks executed 41%
 function _ZN22PFDFixture_eval_1_TestC2Ev called 1 returned 100% blocks executed 100%
-        5:  119:TEST(PFDFixture, eval_1) {
+        5:  125:TEST(PFDFixture, eval_1) {
 call    0 returned 100%
 call    1 returned 100%
 call    2 returned 100%
@@ -1012,11 +1106,11 @@ branch  7 taken 0% (fallthrough)
 branch  8 taken 100%
 call    9 never executed
 call   10 returned 100%
-        1:  120:    const int v = pfd_eval();
+        1:  126:    const int v = pfd_eval();
 call    0 returned 100%
 branch  1 taken 100% (fallthrough)
 branch  2 taken 0% (throw)
-        1:  121:    ASSERT_EQ(1, v);}
+        1:  127:    ASSERT_EQ(1, v);}
 call    0 returned 100%
 branch  1 taken 100% (fallthrough)
 branch  2 taken 0% (throw)
@@ -1043,93 +1137,16 @@ branch 22 taken 0%
 call   23 never executed
 call   24 never executed
 call   25 never executed
-        -:  122:
-        -:  123:// -----
-        -:  124:// print
-        -:  125:// -----
-        -:  126:
+        -:  128:
+        -:  129:// -----
+        -:  130:// print
+        -:  131:// -----
+        -:  132:
 function _ZN21PFDFixture_print_TestD0Ev called 1 returned 100% blocks executed 100%
 function _ZN21PFDFixture_print_TestD2Ev called 1 returned 100% blocks executed 75%
 function _ZN21PFDFixture_print_Test8TestBodyEv called 1 returned 100% blocks executed 50%
 function _ZN21PFDFixture_print_TestC2Ev called 1 returned 100% blocks executed 100%
-        5:  127:TEST(PFDFixture, print) {
-call    0 returned 100%
-call    1 returned 100%
-call    2 returned 100%
-call    3 returned 100%
-call    4 returned 100%
-call    5 returned 100%
-call    6 returned 100%
-branch  7 taken 0% (fallthrough)
-branch  8 taken 100%
-call    9 never executed
-call   10 returned 100%
-        1:  128:    ostringstream w;
-call    0 returned 100%
-branch  1 taken 100% (fallthrough)
-branch  2 taken 0% (throw)
-        2:  129:    list<int> p = {1, 2, 3, 4};
-call    0 returned 100%
-call    1 returned 100%
-branch  2 taken 100% (fallthrough)
-branch  3 taken 0% (throw)
-call    4 returned 100%
-call    5 returned 100%
-branch  6 taken 100%
-branch  7 taken 0%
-call    8 never executed
-        1:  130:    pfd_print(w, p);
-call    0 returned 100%
-branch  1 taken 100% (fallthrough)
-branch  2 taken 0% (throw)
-call    3 returned 100%
-branch  4 taken 100% (fallthrough)
-branch  5 taken 0% (throw)
-call    6 returned 100%
-call    7 never executed
-call    8 never executed
-        2:  131:    ASSERT_EQ("1 2 3 4\n", w.str());}
-call    0 returned 100%
-branch  1 taken 100% (fallthrough)
-branch  2 taken 0% (throw)
-call    3 returned 100%
-branch  4 taken 100% (fallthrough)
-branch  5 taken 0% (throw)
-call    6 returned 100%
-call    7 returned 100%
-branch  8 taken 0% (fallthrough)
-branch  9 taken 100%
-call   10 never executed
-branch 11 never executed
-branch 12 never executed
-call   13 never executed
-branch 14 never executed
-branch 15 never executed
-call   16 never executed
-branch 17 never executed
-branch 18 never executed
-call   19 never executed
-branch 20 never executed
-branch 21 never executed
-call   22 never executed
-call   23 never executed
-call   24 returned 100%
-branch 25 taken 100%
-branch 26 taken 0%
-call   27 returned 100%
-branch 28 taken 100%
-branch 29 taken 0%
-call   30 never executed
-call   31 never executed
-call   32 never executed
-call   33 never executed
-call   34 never executed
-        -:  132:
-function _ZN22PFDFixture_print2_TestD0Ev called 1 returned 100% blocks executed 100%
-function _ZN22PFDFixture_print2_TestD2Ev called 1 returned 100% blocks executed 75%
-function _ZN22PFDFixture_print2_Test8TestBodyEv called 1 returned 100% blocks executed 50%
-function _ZN22PFDFixture_print2_TestC2Ev called 1 returned 100% blocks executed 100%
-        5:  133:TEST(PFDFixture, print2) {
+        5:  133:TEST(PFDFixture, print) {
 call    0 returned 100%
 call    1 returned 100%
 call    2 returned 100%
@@ -1145,7 +1162,7 @@ call   10 returned 100%
 call    0 returned 100%
 branch  1 taken 100% (fallthrough)
 branch  2 taken 0% (throw)
-        2:  135:    list<int> p = {5, 2, 1, 4};
+        2:  135:    list<int> p = {1, 2, 3, 4};
 call    0 returned 100%
 call    1 returned 100%
 branch  2 taken 100% (fallthrough)
@@ -1165,7 +1182,7 @@ branch  5 taken 0% (throw)
 call    6 returned 100%
 call    7 never executed
 call    8 never executed
-        2:  137:    ASSERT_EQ("5 2 1 4\n", w.str());}
+        2:  137:    ASSERT_EQ("1 2 3 4\n", w.str());}
 call    0 returned 100%
 branch  1 taken 100% (fallthrough)
 branch  2 taken 0% (throw)
@@ -1202,11 +1219,11 @@ call   32 never executed
 call   33 never executed
 call   34 never executed
         -:  138:
-function _ZN22PFDFixture_print3_TestD0Ev called 1 returned 100% blocks executed 100%
-function _ZN22PFDFixture_print3_TestD2Ev called 1 returned 100% blocks executed 75%
-function _ZN22PFDFixture_print3_Test8TestBodyEv called 1 returned 100% blocks executed 50%
-function _ZN22PFDFixture_print3_TestC2Ev called 1 returned 100% blocks executed 100%
-        5:  139:TEST(PFDFixture, print3) {
+function _ZN22PFDFixture_print2_TestD0Ev called 1 returned 100% blocks executed 100%
+function _ZN22PFDFixture_print2_TestD2Ev called 1 returned 100% blocks executed 75%
+function _ZN22PFDFixture_print2_Test8TestBodyEv called 1 returned 100% blocks executed 50%
+function _ZN22PFDFixture_print2_TestC2Ev called 1 returned 100% blocks executed 100%
+        5:  139:TEST(PFDFixture, print2) {
 call    0 returned 100%
 call    1 returned 100%
 call    2 returned 100%
@@ -1222,7 +1239,7 @@ call   10 returned 100%
 call    0 returned 100%
 branch  1 taken 100% (fallthrough)
 branch  2 taken 0% (throw)
-        2:  141:    list<int> p = {5, 2, 1, 4, 3, 7};
+        2:  141:    list<int> p = {5, 2, 1, 4};
 call    0 returned 100%
 call    1 returned 100%
 branch  2 taken 100% (fallthrough)
@@ -1242,7 +1259,7 @@ branch  5 taken 0% (throw)
 call    6 returned 100%
 call    7 never executed
 call    8 never executed
-        2:  143:    ASSERT_EQ("5 2 1 4 3 7\n", w.str());}
+        2:  143:    ASSERT_EQ("5 2 1 4\n", w.str());}
 call    0 returned 100%
 branch  1 taken 100% (fallthrough)
 branch  2 taken 0% (throw)
@@ -1279,11 +1296,11 @@ call   32 never executed
 call   33 never executed
 call   34 never executed
         -:  144:
-function _ZN22PFDFixture_print4_TestD0Ev called 1 returned 100% blocks executed 100%
-function _ZN22PFDFixture_print4_TestD2Ev called 1 returned 100% blocks executed 75%
-function _ZN22PFDFixture_print4_Test8TestBodyEv called 1 returned 100% blocks executed 50%
-function _ZN22PFDFixture_print4_TestC2Ev called 1 returned 100% blocks executed 100%
-        5:  145:TEST(PFDFixture, print4) {
+function _ZN22PFDFixture_print3_TestD0Ev called 1 returned 100% blocks executed 100%
+function _ZN22PFDFixture_print3_TestD2Ev called 1 returned 100% blocks executed 75%
+function _ZN22PFDFixture_print3_Test8TestBodyEv called 1 returned 100% blocks executed 50%
+function _ZN22PFDFixture_print3_TestC2Ev called 1 returned 100% blocks executed 100%
+        5:  145:TEST(PFDFixture, print3) {
 call    0 returned 100%
 call    1 returned 100%
 call    2 returned 100%
@@ -1295,13 +1312,90 @@ branch  7 taken 0% (fallthrough)
 branch  8 taken 100%
 call    9 never executed
 call   10 returned 100%
-        1:  146:    list<int> p = {1};
+        1:  146:    ostringstream w;
+call    0 returned 100%
+branch  1 taken 100% (fallthrough)
+branch  2 taken 0% (throw)
+        2:  147:    list<int> p = {5, 2, 1, 4, 3, 7};
 call    0 returned 100%
 call    1 returned 100%
 branch  2 taken 100% (fallthrough)
 branch  3 taken 0% (throw)
 call    4 returned 100%
-        2:  147:    ostringstream w;
+call    5 returned 100%
+branch  6 taken 100%
+branch  7 taken 0%
+call    8 never executed
+        1:  148:    pfd_print(w, p);
+call    0 returned 100%
+branch  1 taken 100% (fallthrough)
+branch  2 taken 0% (throw)
+call    3 returned 100%
+branch  4 taken 100% (fallthrough)
+branch  5 taken 0% (throw)
+call    6 returned 100%
+call    7 never executed
+call    8 never executed
+        2:  149:    ASSERT_EQ("5 2 1 4 3 7\n", w.str());}
+call    0 returned 100%
+branch  1 taken 100% (fallthrough)
+branch  2 taken 0% (throw)
+call    3 returned 100%
+branch  4 taken 100% (fallthrough)
+branch  5 taken 0% (throw)
+call    6 returned 100%
+call    7 returned 100%
+branch  8 taken 0% (fallthrough)
+branch  9 taken 100%
+call   10 never executed
+branch 11 never executed
+branch 12 never executed
+call   13 never executed
+branch 14 never executed
+branch 15 never executed
+call   16 never executed
+branch 17 never executed
+branch 18 never executed
+call   19 never executed
+branch 20 never executed
+branch 21 never executed
+call   22 never executed
+call   23 never executed
+call   24 returned 100%
+branch 25 taken 100%
+branch 26 taken 0%
+call   27 returned 100%
+branch 28 taken 100%
+branch 29 taken 0%
+call   30 never executed
+call   31 never executed
+call   32 never executed
+call   33 never executed
+call   34 never executed
+        -:  150:
+function _ZN22PFDFixture_print4_TestD0Ev called 1 returned 100% blocks executed 100%
+function _ZN22PFDFixture_print4_TestD2Ev called 1 returned 100% blocks executed 75%
+function _ZN22PFDFixture_print4_Test8TestBodyEv called 1 returned 100% blocks executed 50%
+function _ZN22PFDFixture_print4_TestC2Ev called 1 returned 100% blocks executed 100%
+        5:  151:TEST(PFDFixture, print4) {
+call    0 returned 100%
+call    1 returned 100%
+call    2 returned 100%
+call    3 returned 100%
+call    4 returned 100%
+call    5 returned 100%
+call    6 returned 100%
+branch  7 taken 0% (fallthrough)
+branch  8 taken 100%
+call    9 never executed
+call   10 returned 100%
+        1:  152:    list<int> p = {1};
+call    0 returned 100%
+call    1 returned 100%
+branch  2 taken 100% (fallthrough)
+branch  3 taken 0% (throw)
+call    4 returned 100%
+        2:  153:    ostringstream w;
 call    0 returned 100%
 branch  1 taken 100% (fallthrough)
 branch  2 taken 0% (throw)
@@ -1309,7 +1403,7 @@ call    3 returned 100%
 branch  4 taken 100%
 branch  5 taken 0%
 call    6 never executed
-        1:  148:    pfd_print(w, p);
+        1:  154:    pfd_print(w, p);
 call    0 returned 100%
 branch  1 taken 100% (fallthrough)
 branch  2 taken 0% (throw)
@@ -1321,7 +1415,7 @@ call    7 never executed
 call    8 never executed
 function _GLOBAL__sub_I__ZN21PFDFixture_solve_Test10test_info_E called 1 returned 100% blocks executed 100%
 function _Z41__static_initialization_and_destruction_0ii called 1 returned 100% blocks executed 100%
-        5:  149:    ASSERT_EQ("1\n", w.str());}
+        5:  155:    ASSERT_EQ("1\n", w.str());}
 call    0 returned 100%
 branch  1 taken 100% (fallthrough)
 branch  2 taken 0%
@@ -1362,157 +1456,27 @@ call   36 never executed
 call   37 never executed
 call   38 never executed
 call   39 never executed
-        -:  150:
-        -:  151:
-        -:  152:     
-        -:  153:
-        -:  154:/*
-        -:  155:TEST(PFDFixture, solve2) {
-        -:  156:    istringstream r("210 201\n");
-        -:  157:    ostringstream w;
-        -:  158:    pfd_solve(r, w);
-        -:  159:    ASSERT_EQ("210 201 89\n", w.str());}
+        -:  156:
+        -:  157:
+        -:  158:     
+        -:  159:
         -:  160:
-        -:  161:TEST(PFDFixture, solve3) {
-        -:  162:    istringstream r("1 1\n");
-        -:  163:    ostringstream w;
-        -:  164:    pfd_solve(r, w);
-        -:  165:    ASSERT_EQ("1 1 1\n", w.str());}
-        -:  166:
-        -:  167:TEST(PFDFixture, solve4) {
-        -:  168:    istringstream r("1 1\n200 100\n10 11\n1 2\n");
-        -:  169:    ostringstream w;
-        -:  170:    pfd_solve(r, w);
-        -:  171:    ASSERT_EQ("1 1 1\n200 100 125\n10 11 15\n1 2 2\n", w.str());}
-        -:  172:
-        -:  173:
-        -:  174:// -----
-        -:  175:// cycle length
-        -:  176:// -----
-        -:  177:
-        -:  178:TEST(PFDFixture, cycle_length1) {
-        -:  179:    const int c = pfd_cycle_length(1);
-        -:  180:    ASSERT_EQ(1, c);}
-        -:  181:
-        -:  182:
-        -:  183:TEST(PFDFixture, cycle_length2) {
-        -:  184:    const int c = pfd_cycle_length(5);
-        -:  185:    ASSERT_EQ(6, c);}
-        -:  186:
-        -:  187:TEST(PFDFixture, cycle_length3) {
-        -:  188:    const int c = pfd_cycle_length(10);
-        -:  189:    ASSERT_EQ(7, c);}
-        -:  190:
-        -:  191:
-        -:  192:TEST(PFDFixture, cycle_length4) {
-        -:  193:    const int c = pfd_cycle_length(704);
-        -:  194:    ASSERT_EQ(21, c);}
-        -:  195:
-        -:  196:// -----
-        -:  197:// max cycle length
-        -:  198:// -----
-        -:  199:
-        -:  200:TEST(PFDFixture, max_cl1) {
-        -:  201:    const int m = pfd_maxcl(1, 10);
-        -:  202:    ASSERT_EQ(20, m);}
-        -:  203:
-        -:  204:
-        -:  205:TEST(PFDFixture, max_cl2) {
-        -:  206:    const int m = pfd_maxcl(100, 200);
-        -:  207:    ASSERT_EQ(125, m);}
-        -:  208:
-        -:  209:
-        -:  210:TEST(PFDFixture, max_cl3) {
-        -:  211:    const int m = pfd_maxcl(201, 210);
-        -:  212:    ASSERT_EQ(89, m);}
-        -:  213:
-        -:  214:
-        -:  215:TEST(PFDFixture, max_cl4) {
-        -:  216:    const int m = pfd_maxcl(900, 1000);
-        -:  217:    ASSERT_EQ(174, m);}
-        -:  218:
-        -:  219:
-        -:  220:TEST(PFDFixture, max_cl5) {
-        -:  221:    const int m = pfd_maxcl(1, 1);
-        -:  222:    ASSERT_EQ(1, m);}
-        -:  223:
-        -:  224:
-        -:  225:TEST(PFDFixture, max_cl6) {
-        -:  226:    const int m = pfd_maxcl(10, 11);
-        -:  227:    ASSERT_EQ(15, m);}
-        -:  228:
-        -:  229:
-        -:  230:TEST(PFDFixture, max_cl7) {
-        -:  231:    const int m = pfd_maxcl(1, 2);
-        -:  232:    ASSERT_EQ(2, m);}
-        -:  233:*/
-        -:  234:/*
-        -:  235:% ls -al /usr/include/gtest/
-        -:  236:...
-        -:  237:gtest.h
-        -:  238:...
-        -:  239:% locate libgtest.a
-        -:  240:/usr/lib/libgtest.a
-        -:  241:...
-        -:  242:% locate libpthread.a
-        -:  243:...
-        -:  244:/usr/lib32/libpthread.a
-        -:  245:% locate libgtest_main.a
-        -:  246:/usr/lib/libgtest_main.a
-        -:  247:...
-        -:  248:% g++-4.8 -fprofile-arcs -ftest-coverage -pedantic -std=c++11 -Wall PFD.c++ TestPFD.c++ -o TestPFD -lgtest -lgtest_main -lpthread
-        -:  249:% valgrind TestPFD        >  TestPFD.out 2>&1
-        -:  250:% gcov-4.8 -b PFD.c++     >> TestPFD.out
-        -:  251:% gcov-4.8 -b TestPFD.c++ >> TestPFD.out
-        -:  252:% cat TestPFD.out
-        -:  253:==14225== Memcheck, a memory error detector
-        -:  254:==14225== Copyright (C) 2002-2011, and GNU GPL'd, by Julian Seward et al.
-        -:  255:==14225== Using Valgrind-3.7.0 and LibVEX; rerun with -h for copyright info
-        -:  256:==14225== Command: TestPFD
-        -:  257:==14225==
-        -:  258:Running main() from gtest_main.cc
-        -:  259:[==========] Running 7 tests from 1 test case.
-        -:  260:[----------] Global test environment set-up.
-        -:  261:[----------] 7 tests from PFD
-        -:  262:[ RUN      ] PFD.read
-        -:  263:[       OK ] PFD.read (31 ms)
-        -:  264:[ RUN      ] PFD.eval_1
-        -:  265:[       OK ] PFD.eval_1 (5 ms)
-        -:  266:[ RUN      ] PFD.eval_2
-        -:  267:[       OK ] PFD.eval_2 (3 ms)
-        -:  268:[ RUN      ] PFD.eval_3
-        -:  269:[       OK ] PFD.eval_3 (3 ms)
-        -:  270:[ RUN      ] PFD.eval_4
-        -:  271:[       OK ] PFD.eval_4 (3 ms)
-        -:  272:[ RUN      ] PFD.print
-        -:  273:[       OK ] PFD.print (17 ms)
-        -:  274:[ RUN      ] PFD.solve
-        -:  275:[       OK ] PFD.solve (10 ms)
-        -:  276:[----------] 7 tests from PFD (88 ms total)
-        -:  277:[----------] Global test environment tear-down
-        -:  278:[==========] 7 tests from 1 test case ran. (132 ms total)
-        -:  279:[  PASSED  ] 7 tests.
-        -:  280:==14225==
-        -:  281:==14225== HEAP SUMMARY:
-        -:  282:==14225==     in use at exit: 0 bytes in 0 blocks
-        -:  283:==14225==   total heap usage: 495 allocs, 495 frees, 70,302 bytes allocated
-        -:  284:==14225==
-        -:  285:==14225== All heap blocks were freed -- no leaks are possible
-        -:  286:==14225==
-        -:  287:==14225== For counts of detected and suppressed errors, rerun with: -v
-        -:  288:==14225== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 2 from 2)
-        -:  289:File 'PFD.c++'
-        -:  290:Lines executed:100.00% of 17
-        -:  291:Branches executed:100.00% of 18
-        -:  292:Taken at least once:61.11% of 18
-        -:  293:Calls executed:89.47% of 19
-        -:  294:Creating 'PFD.c++.gcov'
-        -:  295:...
-        -:  296:File 'TestPFD.c++'
-        -:  297:Lines executed:100.00% of 26
-        -:  298:Branches executed:57.14% of 224
-        -:  299:Taken at least once:28.57% of 224
-        -:  300:Calls executed:54.07% of 209
-        -:  301:Creating 'TestPFD.c++.gcov'
-        -:  302:...
-        -:  303:*/
+        -:  161:/*
+        -:  162:% ls -al /usr/include/gtest/
+        -:  163:...
+        -:  164:gtest.h
+        -:  165:...
+        -:  166:% locate libgtest.a
+        -:  167:/usr/lib/libgtest.a
+        -:  168:...
+        -:  169:% locate libpthread.a
+        -:  170:...
+        -:  171:/usr/lib32/libpthread.a
+        -:  172:% locate libgtest_main.a
+        -:  173:/usr/lib/libgtest_main.a
+        -:  174:...
+        -:  175:% g++-4.8 -fprofile-arcs -ftest-coverage -pedantic -std=c++11 -Wall PFD.c++ TestPFD.c++ -o TestPFD -lgtest -lgtest_main -lpthread
+        -:  176:% valgrind TestPFD        >  TestPFD.out 2>&1
+        -:  177:% gcov-4.8 -b PFD.c++     >> TestPFD.out
+        -:  178:% gcov-4.8 -b TestPFD.c++ >> TestPFD.out
+        -:  179:*/
