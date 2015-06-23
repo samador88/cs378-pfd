@@ -1,0 +1,35 @@
+commit 6e3875996949aeed2b67ee55105db7b0a756679b
+Author: icsmith <icsmith@cs.utexas.edu>
+Date:   Tue Jun 23 16:00:53 2015 -0500
+
+    made everything pretty
+
+commit 74f62ec73fe83ed39cde898d86651b4357f624fd
+Author: icsmith <icsmith@cs.utexas.edu>
+Date:   Tue Jun 23 15:16:40 2015 -0500
+
+    Everything working. will merge if travis ci builds.
+
+commit da61f2fe610e4817e38d7dc2ed0ac973ae3c10d8
+Author: icsmith <icsmith@cs.utexas.edu>
+Date:   Tue Jun 23 14:50:15 2015 -0500
+
+    working functions, Run + Test
+
+commit 020957e9407c2c328087f0abd2fdd5aef74b3987
+Author: Samantha Amador <sa4265@cs.utexas.edu>
+Date:   Tue Jun 23 00:08:50 2015 -0500
+
+    created unit tests
+
+commit d20dd9b6d5b602ad6dfb60c6c8860eae507fb64c
+Author: Samantha Amador <sa4265@cs.utexas.edu>
+Date:   Mon Jun 22 21:43:41 2015 -0500
+
+    inital commit, files created
+
+commit 5445e7e306bcb9285c3f68025eaafbdb13b004af
+Author: samador88 <samador@utexas.edu>
+Date:   Sun Jun 21 13:33:58 2015 -0500
+
+    Initial commit
