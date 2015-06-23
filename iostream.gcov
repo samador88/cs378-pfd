@@ -53,13 +53,13 @@
         -:   48:   *
         -:   49:   *  The &lt;iostream&gt; header declares the eight <em>standard stream
         -:   50:   *  objects</em>.  For other declarations, see
-        -:   51:   *  http://gcc.gnu.org/onlinedocs/libstdc++/manual/bk01pt11ch24.html
+        -:   51:   *  http://gcc.gnu.org/onlinedocs/libstdc++/manual/io.html
         -:   52:   *  and the @link iosfwd I/O forward declarations @endlink
         -:   53:   *
         -:   54:   *  They are required by default to cooperate with the global C
         -:   55:   *  library's @c FILE streams, and to be available during program
-        -:   56:   *  startup and termination. For more information, see the HOWTO
-        -:   57:   *  linked to above.
+        -:   56:   *  startup and termination. For more information, see the section of the
+        -:   57:   *  manual linked to above.
         -:   58:  */
         -:   59:  //@{
         -:   60:  extern istream cin;		/// Linked to standard input

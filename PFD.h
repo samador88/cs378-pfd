@@ -49,8 +49,13 @@ int build_adj_list (list<int> vals);
  * @param j the end       of the range, inclusive
  * @return the max cycle length of the range [i, j]
  */
-int pfd_eval (int i, int j);
+int pfd_eval ();
 
+// -------------
+// update
+// ------------
+
+int pfd_update_tasks_list(int node);
 // -------------
 // pfd_print
 // -------------
@@ -62,7 +67,7 @@ int pfd_eval (int i, int j);
  * @param j the end       of the range, inclusive
  * @param v the max cycle length
  */
-void pfd_print (ostream& w, int i, int j, int v);
+void pfd_print (ostream& w, list<int> l);
 
 // -------------
 // pfd_solve

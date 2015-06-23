@@ -227,9 +227,9 @@
         -:  222:    struct greater : public binary_function<_Tp, _Tp, bool>
         -:  223:    {
         -:  224:      bool
-function _ZNKSt7greaterIiEclERKiS2_ called 0 returned 0% blocks executed 0%
-    #####:  225:      operator()(const _Tp& __x, const _Tp& __y) const
-    #####:  226:      { return __x > __y; }
+function _ZNKSt7greaterIiEclERKiS2_ called 1 returned 100% blocks executed 100%
+        1:  225:      operator()(const _Tp& __x, const _Tp& __y) const
+        1:  226:      { return __x > __y; }
         -:  227:    };
         -:  228:
         -:  229:  /// One of the @link comparison_functors comparison functors@endlink.

@@ -26,3 +26,8 @@
 *.exe
 *.out
 *.app
+
+# Google test files
+*.gcov
+*.gcda
+*.gcno

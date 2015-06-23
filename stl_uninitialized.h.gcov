@@ -122,10 +122,10 @@ branch  5 never executed
         -:   88:    {
         -:   89:      template<typename _InputIterator, typename _ForwardIterator>
         -:   90:        static _ForwardIterator
-function _ZNSt20__uninitialized_copyILb1EE13__uninit_copyISt13move_iteratorIPiES3_EET0_T_S6_S5_ called 2 returned 100% blocks executed 100%
-        2:   91:        __uninit_copy(_InputIterator __first, _InputIterator __last,
+function _ZNSt20__uninitialized_copyILb1EE13__uninit_copyISt13move_iteratorIPiES3_EET0_T_S6_S5_ called 4 returned 100% blocks executed 100%
+        4:   91:        __uninit_copy(_InputIterator __first, _InputIterator __last,
         -:   92:		      _ForwardIterator __result)
-        2:   93:        { return std::copy(__first, __last, __result); }
+        4:   93:        { return std::copy(__first, __last, __result); }
 call    0 returned 100%
         -:   94:    };
         -:   95:
@@ -141,9 +141,9 @@ call    0 returned 100%
         -:  105:  template<typename _InputIterator, typename _ForwardIterator>
         -:  106:    inline _ForwardIterator
 function _ZSt18uninitialized_copyISt13move_iteratorIPSt4listIiSaIiEEES4_ET0_T_S7_S6_ called 0 returned 0% blocks executed 0%
-function _ZSt18uninitialized_copyISt13move_iteratorIPiES1_ET0_T_S4_S3_ called 2 returned 100% blocks executed 100%
+function _ZSt18uninitialized_copyISt13move_iteratorIPiES1_ET0_T_S4_S3_ called 4 returned 100% blocks executed 100%
 function _ZSt18uninitialized_copyIPKSt4listIiSaIiEEPS2_ET0_T_S7_S6_ called 1 returned 100% blocks executed 100%
-        3:  107:    uninitialized_copy(_InputIterator __first, _InputIterator __last,
+        5:  107:    uninitialized_copy(_InputIterator __first, _InputIterator __last,
         -:  108:		       _ForwardIterator __result)
         -:  109:    {
         -:  110:      typedef typename iterator_traits<_InputIterator>::value_type
@@ -153,7 +153,7 @@ function _ZSt18uninitialized_copyIPKSt4listIiSaIiEEPS2_ET0_T_S7_S6_ called 1 ret
         -:  114:
         -:  115:      return std::__uninitialized_copy<(__is_trivial(_ValueType1)
         -:  116:					&& __is_trivial(_ValueType2))>::
-        3:  117:	__uninit_copy(__first, __last, __result);
+        5:  117:	__uninit_copy(__first, __last, __result);
 call    0 never executed
 call    1 returned 100%
 call    2 returned 100%
@@ -296,11 +296,11 @@ call    2 returned 100%
         -:  254:  template<typename _InputIterator, typename _ForwardIterator, typename _Tp>
         -:  255:    inline _ForwardIterator
 function _ZSt22__uninitialized_copy_aISt13move_iteratorIPSt4listIiSaIiEEES4_S3_ET0_T_S7_S6_RSaIT1_E called 0 returned 0% blocks executed 0%
-function _ZSt22__uninitialized_copy_aISt13move_iteratorIPiES1_iET0_T_S4_S3_RSaIT1_E called 2 returned 100% blocks executed 100%
+function _ZSt22__uninitialized_copy_aISt13move_iteratorIPiES1_iET0_T_S4_S3_RSaIT1_E called 4 returned 100% blocks executed 100%
 function _ZSt22__uninitialized_copy_aIPKSt4listIiSaIiEEPS2_S2_ET0_T_S7_S6_RSaIT1_E called 1 returned 100% blocks executed 100%
-        3:  256:    __uninitialized_copy_a(_InputIterator __first, _InputIterator __last,
+        5:  256:    __uninitialized_copy_a(_InputIterator __first, _InputIterator __last,
         -:  257:			   _ForwardIterator __result, allocator<_Tp>&)
-        3:  258:    { return std::uninitialized_copy(__first, __last, __result); }
+        5:  258:    { return std::uninitialized_copy(__first, __last, __result); }
 call    0 never executed
 call    1 returned 100%
 call    2 returned 100%
@@ -320,15 +320,15 @@ call    2 returned 100%
         -:  272:	   typename _Allocator>
         -:  273:    inline _ForwardIterator
 function _ZSt34__uninitialized_move_if_noexcept_aIPSt4listIiSaIiEES3_SaIS2_EET0_T_S6_S5_RT1_ called 0 returned 0% blocks executed 0%
-function _ZSt34__uninitialized_move_if_noexcept_aIPiS0_SaIiEET0_T_S3_S2_RT1_ called 2 returned 100% blocks executed 100%
-        2:  274:    __uninitialized_move_if_noexcept_a(_InputIterator __first,
+function _ZSt34__uninitialized_move_if_noexcept_aIPiS0_SaIiEET0_T_S3_S2_RT1_ called 4 returned 100% blocks executed 100%
+        4:  274:    __uninitialized_move_if_noexcept_a(_InputIterator __first,
         -:  275:				       _InputIterator __last,
         -:  276:				       _ForwardIterator __result,
         -:  277:				       _Allocator& __alloc)
         -:  278:    {
         -:  279:      return std::__uninitialized_copy_a
         -:  280:	(_GLIBCXX_MAKE_MOVE_IF_NOEXCEPT_ITERATOR(__first),
-        2:  281:	 _GLIBCXX_MAKE_MOVE_IF_NOEXCEPT_ITERATOR(__last), __result, __alloc);
+        4:  281:	 _GLIBCXX_MAKE_MOVE_IF_NOEXCEPT_ITERATOR(__last), __result, __alloc);
 call    0 never executed
 call    1 never executed
 call    2 never executed

@@ -93,18 +93,25 @@
         -:   88:  template<typename _Tp, typename _Alloc>
         -:   89:    template<typename... _Args>
         -:   90:      void
-        -:   91:      vector<_Tp, _Alloc>::
+function _ZNSt6vectorIiSaIiEE12emplace_backIIiEEEvDpOT_ called 6 returned 100% blocks executed 100%
+        6:   91:      vector<_Tp, _Alloc>::
         -:   92:      emplace_back(_Args&&... __args)
         -:   93:      {
-        -:   94:	if (this->_M_impl._M_finish != this->_M_impl._M_end_of_storage)
+        6:   94:	if (this->_M_impl._M_finish != this->_M_impl._M_end_of_storage)
+branch  0 taken 67% (fallthrough)
+branch  1 taken 33%
         -:   95:	  {
-        -:   96:	    _Alloc_traits::construct(this->_M_impl, this->_M_impl._M_finish,
-        -:   97:				     std::forward<_Args>(__args)...);
-        -:   98:	    ++this->_M_impl._M_finish;
+        4:   96:	    _Alloc_traits::construct(this->_M_impl, this->_M_impl._M_finish,
+call    0 returned 100%
+        4:   97:				     std::forward<_Args>(__args)...);
+call    0 returned 100%
+        4:   98:	    ++this->_M_impl._M_finish;
         -:   99:	  }
         -:  100:	else
-        -:  101:	  _M_emplace_back_aux(std::forward<_Args>(__args)...);
-        -:  102:      }
+        2:  101:	  _M_emplace_back_aux(std::forward<_Args>(__args)...);
+call    0 returned 100%
+call    1 returned 100%
+        6:  102:      }
         -:  103:#endif
         -:  104:
         -:  105:  template<typename _Tp, typename _Alloc>
@@ -401,44 +408,75 @@
         -:  396:  template<typename _Tp, typename _Alloc>
         -:  397:    template<typename... _Args>
         -:  398:      void
-        -:  399:      vector<_Tp, _Alloc>::
+function _ZNSt6vectorIiSaIiEE19_M_emplace_back_auxIIiEEEvDpOT_ called 2 returned 100% blocks executed 52%
+        2:  399:      vector<_Tp, _Alloc>::
         -:  400:      _M_emplace_back_aux(_Args&&... __args)
         -:  401:      {
         -:  402:	const size_type __len =
-        -:  403:	  _M_check_len(size_type(1), "vector::_M_emplace_back_aux");
-        -:  404:	pointer __new_start(this->_M_allocate(__len));
-        -:  405:	pointer __new_finish(__new_start);
+        2:  403:	  _M_check_len(size_type(1), "vector::_M_emplace_back_aux");
+call    0 returned 100%
+        2:  404:	pointer __new_start(this->_M_allocate(__len));
+call    0 returned 100%
+        2:  405:	pointer __new_finish(__new_start);
         -:  406:	__try
         -:  407:	  {
-        -:  408:	    _Alloc_traits::construct(this->_M_impl, __new_start + size(),
-        -:  409:				     std::forward<_Args>(__args)...);
-        -:  410:	    __new_finish = 0;
+        4:  408:	    _Alloc_traits::construct(this->_M_impl, __new_start + size(),
+call    0 returned 100%
+call    1 returned 100%
+branch  2 taken 100% (fallthrough)
+branch  3 taken 0% (throw)
+        4:  409:				     std::forward<_Args>(__args)...);
+call    0 returned 100%
+        2:  410:	    __new_finish = 0;
         -:  411:
-        -:  412:	    __new_finish
+        2:  412:	    __new_finish
+call    0 returned 100%
+branch  1 taken 100% (fallthrough)
+branch  2 taken 0% (throw)
         -:  413:	      = std::__uninitialized_move_if_noexcept_a
         -:  414:	      (this->_M_impl._M_start, this->_M_impl._M_finish,
-        -:  415:	       __new_start, _M_get_Tp_allocator());
+        2:  415:	       __new_start, _M_get_Tp_allocator());
+call    0 returned 100%
         -:  416:
-        -:  417:	    ++__new_finish;
+        2:  417:	    ++__new_finish;
         -:  418:	  }
-        -:  419:	__catch(...)
+    =====:  419:	__catch(...)
+call    0 never executed
+call    1 never executed
+call    2 never executed
         -:  420:	  {
-        -:  421:	    if (!__new_finish)
-        -:  422:	      _Alloc_traits::destroy(this->_M_impl, __new_start + size());
+    =====:  421:	    if (!__new_finish)
+branch  0 never executed
+branch  1 never executed
+    =====:  422:	      _Alloc_traits::destroy(this->_M_impl, __new_start + size());
+call    0 never executed
+call    1 never executed
+branch  2 never executed
+branch  3 never executed
         -:  423:	    else
-        -:  424:	      std::_Destroy(__new_start, __new_finish, _M_get_Tp_allocator());
-        -:  425:	    _M_deallocate(__new_start, __len);
-        -:  426:	    __throw_exception_again;
+    =====:  424:	      std::_Destroy(__new_start, __new_finish, _M_get_Tp_allocator());
+call    0 never executed
+call    1 never executed
+branch  2 never executed
+branch  3 never executed
+    =====:  425:	    _M_deallocate(__new_start, __len);
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    =====:  426:	    __throw_exception_again;
         -:  427:	  }
-        -:  428:	std::_Destroy(this->_M_impl._M_start, this->_M_impl._M_finish,
-        -:  429:		      _M_get_Tp_allocator());
-        -:  430:	_M_deallocate(this->_M_impl._M_start,
+        2:  428:	std::_Destroy(this->_M_impl._M_start, this->_M_impl._M_finish,
+call    0 returned 100%
+        2:  429:		      _M_get_Tp_allocator());
+call    0 returned 100%
+        2:  430:	_M_deallocate(this->_M_impl._M_start,
+call    0 returned 100%
         -:  431:		      this->_M_impl._M_end_of_storage
-        -:  432:		      - this->_M_impl._M_start);
-        -:  433:	this->_M_impl._M_start = __new_start;
-        -:  434:	this->_M_impl._M_finish = __new_finish;
-        -:  435:	this->_M_impl._M_end_of_storage = __new_start + __len;
-        -:  436:      }
+        2:  432:		      - this->_M_impl._M_start);
+        2:  433:	this->_M_impl._M_start = __new_start;
+        2:  434:	this->_M_impl._M_finish = __new_finish;
+        2:  435:	this->_M_impl._M_end_of_storage = __new_start + __len;
+        2:  436:      }
         -:  437:#endif
         -:  438:
         -:  439:  template<typename _Tp, typename _Alloc>

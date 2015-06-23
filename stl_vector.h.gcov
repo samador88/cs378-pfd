@@ -132,16 +132,16 @@ call    0 returned 100%
         -:  110:      typedef _Alloc allocator_type;
         -:  111:
         -:  112:      _Tp_alloc_type&
-function _ZNSt12_Vector_baseIiSaIiEE19_M_get_Tp_allocatorEv called 11 returned 100% blocks executed 100%
+function _ZNSt12_Vector_baseIiSaIiEE19_M_get_Tp_allocatorEv called 15 returned 100% blocks executed 100%
 function _ZNSt12_Vector_baseISt4listIiSaIiEESaIS2_EE19_M_get_Tp_allocatorEv called 1 returned 100% blocks executed 100%
-       12:  113:      _M_get_Tp_allocator() _GLIBCXX_NOEXCEPT
-       12:  114:      { return *static_cast<_Tp_alloc_type*>(&this->_M_impl); }
+       16:  113:      _M_get_Tp_allocator() _GLIBCXX_NOEXCEPT
+       16:  114:      { return *static_cast<_Tp_alloc_type*>(&this->_M_impl); }
         -:  115:
         -:  116:      const _Tp_alloc_type&
 function _ZNKSt12_Vector_baseISt4listIiSaIiEESaIS2_EE19_M_get_Tp_allocatorEv called 0 returned 0% blocks executed 0%
-function _ZNKSt12_Vector_baseIiSaIiEE19_M_get_Tp_allocatorEv called 4 returned 100% blocks executed 100%
-        4:  117:      _M_get_Tp_allocator() const _GLIBCXX_NOEXCEPT
-        4:  118:      { return *static_cast<const _Tp_alloc_type*>(&this->_M_impl); }
+function _ZNKSt12_Vector_baseIiSaIiEE19_M_get_Tp_allocatorEv called 8 returned 100% blocks executed 100%
+        8:  117:      _M_get_Tp_allocator() const _GLIBCXX_NOEXCEPT
+        8:  118:      { return *static_cast<const _Tp_alloc_type*>(&this->_M_impl); }
         -:  119:
         -:  120:      allocator_type
         -:  121:      get_allocator() const _GLIBCXX_NOEXCEPT
@@ -211,10 +211,10 @@ call    1 returned 100%
         -:  164:      _Vector_impl _M_impl;
         -:  165:
         -:  166:      pointer
-function _ZNSt12_Vector_baseIiSaIiEE11_M_allocateEm called 3 returned 100% blocks executed 83%
+function _ZNSt12_Vector_baseIiSaIiEE11_M_allocateEm called 5 returned 100% blocks executed 83%
 function _ZNSt12_Vector_baseISt4listIiSaIiEESaIS2_EE11_M_allocateEm called 1 returned 100% blocks executed 83%
-        4:  167:      _M_allocate(size_t __n)
-        4:  168:      { return __n != 0 ? _M_impl.allocate(__n) : 0; }
+        6:  167:      _M_allocate(size_t __n)
+        6:  168:      { return __n != 0 ? _M_impl.allocate(__n) : 0; }
 branch  0 taken 100% (fallthrough)
 branch  1 taken 0%
 call    2 returned 100%
@@ -224,18 +224,18 @@ call    5 returned 100%
         -:  169:
         -:  170:      void
 function _ZNSt12_Vector_baseISt4listIiSaIiEESaIS2_EE13_M_deallocateEPS2_m called 0 returned 0% blocks executed 0%
-function _ZNSt12_Vector_baseIiSaIiEE13_M_deallocateEPim called 3 returned 100% blocks executed 100%
-        3:  171:      _M_deallocate(pointer __p, size_t __n)
+function _ZNSt12_Vector_baseIiSaIiEE13_M_deallocateEPim called 5 returned 100% blocks executed 100%
+        5:  171:      _M_deallocate(pointer __p, size_t __n)
         -:  172:      {
-        3:  173:	if (__p)
+        5:  173:	if (__p)
 branch  0 never executed
 branch  1 never executed
-branch  2 taken 67% (fallthrough)
-branch  3 taken 33%
-        2:  174:	  _M_impl.deallocate(__p, __n);
+branch  2 taken 60% (fallthrough)
+branch  3 taken 40%
+        3:  174:	  _M_impl.deallocate(__p, __n);
 call    0 never executed
 call    1 returned 100%
-        3:  175:      }
+        5:  175:      }
         -:  176:
         -:  177:    private:
         -:  178:      void
@@ -627,9 +627,9 @@ call    3 never executed
         -:  535:       *  element order.
         -:  536:       */
         -:  537:      iterator
-function _ZNSt6vectorIiSaIiEE5beginEv called 1 returned 100% blocks executed 100%
-        1:  538:      begin() _GLIBCXX_NOEXCEPT
-        1:  539:      { return iterator(this->_M_impl._M_start); }
+function _ZNSt6vectorIiSaIiEE5beginEv called 13 returned 100% blocks executed 100%
+       13:  538:      begin() _GLIBCXX_NOEXCEPT
+       13:  539:      { return iterator(this->_M_impl._M_start); }
 call    0 returned 100%
         -:  540:
         -:  541:      /**
@@ -638,8 +638,10 @@ call    0 returned 100%
         -:  544:       *  element order.
         -:  545:       */
         -:  546:      const_iterator
-        -:  547:      begin() const _GLIBCXX_NOEXCEPT
-        -:  548:      { return const_iterator(this->_M_impl._M_start); }
+function _ZNKSt6vectorIiSaIiEE5beginEv called 13 returned 100% blocks executed 100%
+       13:  547:      begin() const _GLIBCXX_NOEXCEPT
+       13:  548:      { return const_iterator(this->_M_impl._M_start); }
+call    0 returned 100%
         -:  549:
         -:  550:      /**
         -:  551:       *  Returns a read/write iterator that points one past the last
@@ -647,9 +649,9 @@ call    0 returned 100%
         -:  553:       *  element order.
         -:  554:       */
         -:  555:      iterator
-function _ZNSt6vectorIiSaIiEE3endEv called 1 returned 100% blocks executed 100%
-        1:  556:      end() _GLIBCXX_NOEXCEPT
-        1:  557:      { return iterator(this->_M_impl._M_finish); }
+function _ZNSt6vectorIiSaIiEE3endEv called 13 returned 100% blocks executed 100%
+       13:  556:      end() _GLIBCXX_NOEXCEPT
+       13:  557:      { return iterator(this->_M_impl._M_finish); }
 call    0 returned 100%
         -:  558:
         -:  559:      /**
@@ -658,8 +660,10 @@ call    0 returned 100%
         -:  562:       *  ordinary element order.
         -:  563:       */
         -:  564:      const_iterator
-        -:  565:      end() const _GLIBCXX_NOEXCEPT
-        -:  566:      { return const_iterator(this->_M_impl._M_finish); }
+function _ZNKSt6vectorIiSaIiEE3endEv called 7 returned 100% blocks executed 100%
+        7:  565:      end() const _GLIBCXX_NOEXCEPT
+        7:  566:      { return const_iterator(this->_M_impl._M_finish); }
+call    0 returned 100%
         -:  567:
         -:  568:      /**
         -:  569:       *  Returns a read/write reverse iterator that points to the
@@ -738,17 +742,17 @@ call    0 returned 100%
         -:  642:      // [23.2.4.2] capacity
         -:  643:      /**  Returns the number of elements in the %vector.  */
         -:  644:      size_type
-function _ZNKSt6vectorISt4listIiSaIiEESaIS2_EE4sizeEv called 0 returned 0% blocks executed 0%
-function _ZNKSt6vectorIiSaIiEE4sizeEv called 18 returned 100% blocks executed 100%
-       18:  645:      size() const _GLIBCXX_NOEXCEPT
-       18:  646:      { return size_type(this->_M_impl._M_finish - this->_M_impl._M_start); }
+function _ZNKSt6vectorISt4listIiSaIiEESaIS2_EE4sizeEv called 2 returned 100% blocks executed 100%
+function _ZNKSt6vectorIiSaIiEE4sizeEv called 69 returned 100% blocks executed 100%
+       71:  645:      size() const _GLIBCXX_NOEXCEPT
+       71:  646:      { return size_type(this->_M_impl._M_finish - this->_M_impl._M_start); }
         -:  647:
         -:  648:      /**  Returns the size() of the largest possible %vector.  */
         -:  649:      size_type
 function _ZNKSt6vectorISt4listIiSaIiEESaIS2_EE8max_sizeEv called 0 returned 0% blocks executed 0%
-function _ZNKSt6vectorIiSaIiEE8max_sizeEv called 4 returned 100% blocks executed 100%
-        4:  650:      max_size() const _GLIBCXX_NOEXCEPT
-        4:  651:      { return _Alloc_traits::max_size(_M_get_Tp_allocator()); }
+function _ZNKSt6vectorIiSaIiEE8max_sizeEv called 8 returned 100% blocks executed 100%
+        8:  650:      max_size() const _GLIBCXX_NOEXCEPT
+        8:  651:      { return _Alloc_traits::max_size(_M_get_Tp_allocator()); }
 call    0 never executed
 call    1 never executed
 call    2 returned 100%
@@ -765,33 +769,33 @@ call    3 returned 100%
         -:  661:       *  default constructed elements are appended.
         -:  662:       */
         -:  663:      void
-function _ZNSt6vectorISt4listIiSaIiEESaIS2_EE6resizeEm called 0 returned 0% blocks executed 0%
-function _ZNSt6vectorIiSaIiEE6resizeEm called 4 returned 100% blocks executed 100%
-        4:  664:      resize(size_type __new_size)
+function _ZNSt6vectorISt4listIiSaIiEESaIS2_EE6resizeEm called 1 returned 100% blocks executed 63%
+function _ZNSt6vectorIiSaIiEE6resizeEm called 5 returned 100% blocks executed 100%
+        6:  664:      resize(size_type __new_size)
         -:  665:      {
-        4:  666:	if (__new_size > size())
-call    0 never executed
-branch  1 never executed
-branch  2 never executed
+        6:  666:	if (__new_size > size())
+call    0 returned 100%
+branch  1 taken 0% (fallthrough)
+branch  2 taken 100%
 call    3 returned 100%
-branch  4 taken 50% (fallthrough)
-branch  5 taken 50%
+branch  4 taken 40% (fallthrough)
+branch  5 taken 60%
         2:  667:	  _M_default_append(__new_size - size());
 call    0 never executed
 call    1 never executed
 call    2 returned 100%
 call    3 returned 100%
-        2:  668:	else if (__new_size < size())
-call    0 never executed
-branch  1 never executed
-branch  2 never executed
+        4:  668:	else if (__new_size < size())
+call    0 returned 100%
+branch  1 taken 0% (fallthrough)
+branch  2 taken 100%
 call    3 returned 100%
-branch  4 taken 100% (fallthrough)
-branch  5 taken 0%
+branch  4 taken 67% (fallthrough)
+branch  5 taken 33%
         2:  669:	  _M_erase_at_end(this->_M_impl._M_start + __new_size);
 call    0 never executed
 call    1 returned 100%
-        4:  670:      }
+        6:  670:      }
         -:  671:
         -:  672:      /**
         -:  673:       *  @brief  Resizes the %vector to the specified number of elements.
@@ -855,8 +859,12 @@ call    1 returned 100%
         -:  731:       *  equal end().)
         -:  732:       */
         -:  733:      bool
-        -:  734:      empty() const _GLIBCXX_NOEXCEPT
-        -:  735:      { return begin() == end(); }
+function _ZNKSt6vectorIiSaIiEE5emptyEv called 7 returned 100% blocks executed 100%
+        7:  734:      empty() const _GLIBCXX_NOEXCEPT
+        7:  735:      { return begin() == end(); }
+call    0 returned 100%
+call    1 returned 100%
+call    2 returned 100%
         -:  736:
         -:  737:      /**
         -:  738:       *  @brief  Attempt to preallocate enough memory for specified number of
@@ -891,10 +899,10 @@ call    1 returned 100%
         -:  767:       *  see at().)
         -:  768:       */
         -:  769:      reference
-function _ZNSt6vectorISt4listIiSaIiEESaIS2_EEixEm called 6 returned 100% blocks executed 100%
-function _ZNSt6vectorIiSaIiEEixEm called 317 returned 100% blocks executed 100%
-      323:  770:      operator[](size_type __n)
-      323:  771:      { return *(this->_M_impl._M_start + __n); }
+function _ZNSt6vectorISt4listIiSaIiEESaIS2_EEixEm called 32 returned 100% blocks executed 100%
+function _ZNSt6vectorIiSaIiEEixEm called 370 returned 100% blocks executed 100%
+      402:  770:      operator[](size_type __n)
+      402:  771:      { return *(this->_M_impl._M_start + __n); }
         -:  772:
         -:  773:      /**
         -:  774:       *  @brief  Subscript access to the data contained in the %vector.
@@ -970,8 +978,11 @@ function _ZNSt6vectorIiSaIiEEixEm called 317 returned 100% blocks executed 100%
         -:  844:       *  element of the %vector.
         -:  845:       */
         -:  846:      const_reference
-        -:  847:      front() const
-        -:  848:      { return *begin(); }
+function _ZNKSt6vectorIiSaIiEE5frontEv called 6 returned 100% blocks executed 100%
+        6:  847:      front() const
+        6:  848:      { return *begin(); }
+call    0 returned 100%
+call    1 returned 100%
         -:  849:
         -:  850:      /**
         -:  851:       *  Returns a read/write reference to the data at the last
@@ -1042,8 +1053,11 @@ function _ZNSt6vectorIiSaIiEEixEm called 317 returned 100% blocks executed 100%
         -:  916:
         -:  917:#if __cplusplus >= 201103L
         -:  918:      void
-        -:  919:      push_back(value_type&& __x)
-        -:  920:      { emplace_back(std::move(__x)); }
+function _ZNSt6vectorIiSaIiEE9push_backEOi called 6 returned 100% blocks executed 100%
+        6:  919:      push_back(value_type&& __x)
+        6:  920:      { emplace_back(std::move(__x)); }
+call    0 returned 100%
+call    1 returned 100%
         -:  921:
         -:  922:      template<typename... _Args>
         -:  923:        void
@@ -1060,11 +1074,13 @@ function _ZNSt6vectorIiSaIiEEixEm called 317 returned 100% blocks executed 100%
         -:  934:       *  called.
         -:  935:       */
         -:  936:      void
-        -:  937:      pop_back()
+function _ZNSt6vectorIiSaIiEE8pop_backEv called 6 returned 100% blocks executed 100%
+        6:  937:      pop_back()
         -:  938:      {
-        -:  939:	--this->_M_impl._M_finish;
-        -:  940:	_Alloc_traits::destroy(this->_M_impl, this->_M_impl._M_finish);
-        -:  941:      }
+        6:  939:	--this->_M_impl._M_finish;
+        6:  940:	_Alloc_traits::destroy(this->_M_impl, this->_M_impl._M_finish);
+call    0 returned 100%
+        6:  941:      }
         -:  942:
         -:  943:#if __cplusplus >= 201103L
         -:  944:      /**
@@ -1468,10 +1484,10 @@ call    0 returned 100%
         -: 1334:      // Called by the latter.
         -: 1335:      size_type
 function _ZNKSt6vectorISt4listIiSaIiEESaIS2_EE12_M_check_lenEmPKc called 0 returned 0% blocks executed 0%
-function _ZNKSt6vectorIiSaIiEE12_M_check_lenEmPKc called 2 returned 100% blocks executed 87%
-        2: 1336:      _M_check_len(size_type __n, const char* __s) const
+function _ZNKSt6vectorIiSaIiEE12_M_check_lenEmPKc called 4 returned 100% blocks executed 87%
+        4: 1336:      _M_check_len(size_type __n, const char* __s) const
         -: 1337:      {
-        2: 1338:	if (max_size() - size() < __n)
+        4: 1338:	if (max_size() - size() < __n)
 call    0 never executed
 call    1 never executed
 branch  2 never executed
@@ -1484,14 +1500,14 @@ branch  7 taken 100%
 call    0 never executed
 call    1 never executed
         -: 1340:
-        2: 1341:	const size_type __len = size() + std::max(size(), __n);
+        4: 1341:	const size_type __len = size() + std::max(size(), __n);
 call    0 never executed
 call    1 never executed
 call    2 never executed
 call    3 returned 100%
 call    4 returned 100%
 call    5 returned 100%
-        2: 1342:	return (__len < size() || __len > max_size()) ? max_size() : __len;
+        4: 1342:	return (__len < size() || __len > max_size()) ? max_size() : __len;
 call    0 never executed
 branch  1 never executed
 branch  2 never executed

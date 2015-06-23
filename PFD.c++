@@ -27,7 +27,8 @@ int pfd_read_first (const string& s) {
     int j;
     sin >> i >> j;
     tasks.resize(i + 1);
-    for(int k = 0; k < i+1; k++){
+    tasks[0] = -1; //not using 0 slot
+    for(int k = 1; k < i+1; k++){
         tasks[k] = 0;
     }
     return j;}
@@ -50,107 +51,78 @@ list<int> pfd_read_rest (const string& s) {
         lst.push_back(j);
     }
     return lst;}
-/*    tasks[tasknumber] = numdepend;
 
-    for (int i = 0; i < numdepend; ++i){
-        sin >> j;
-
-    }
-    tasks.resize(i);
-    return j;}
-*/
+// ----------
+// build_adj_list
+// ------------
 int build_adj_list (list<int> vals){
     int i = 0;
     list<int>::iterator p = vals.begin();
     int task = *p;
-    ++++p;
+    ++p;
+    tasks[task] += *p;
+    ++p;
     while(p != vals.end()){
         adjacency_list[*p].push_back(task);
-        tasks[*p] += 1;
         ++i;
         ++p;}
         return i;}
 
-void create_adj_list (){ //place holder function, absorb into main 
-    adjacency_list.resize(tasks.size());
-}
+
 
 // ------------
 // pfd_eval
 // ------------
-/*
-int pfd_cycle_length(int i) {
-    assert(i > 0);
-    #ifdef CACHE
-    int current = i;
-    if (current < 1000000 && arr[current] != 0)
-    {
-     return arr[i];
+
+int pfd_eval (void) {
+    //check for tasks with no more dependencies, and push onto pq
+    for(unsigned int i = 1; i < tasks.size(); ++i){
+        if (tasks[i] == 0){
+            pri_q.push(i);
+            tasks[i] = -1;
+        }
     }
-    #endif
-    int c = 1;
-    while (i > 1) 
-    {
-        #ifdef CACHE
-        if (i < 1000000 && arr[i] != 0)
-        {
-            arr[current] = arr[i] + c - 1;
-            return (arr[i] + c-1);       //-1 because one was already counted at initialization
-        }    
-        #endif
-        if((i % 2) == 0)
-            i = (i / 2);
-        else
-            i = (3 * i) + 1;
-        ++c;
-    }
-    assert(c > 0);
-    #ifdef CACHE
-    arr[current] = c;
-    #endif
-    return c;
+    if(!pri_q.empty()){
+        int q = pri_q.top();
+        pri_q.pop();
+        return q;}
+    else{
+        return -1;}
 }
 
-
-int pfd_maxcl(int i, int j) {
-    assert(i > 0 && j > 0);
-    assert(i < 1000000 && j < 1000000);
-    int max = 0;
-    int n;
-    while(i <= j) 
-    {
-       n = pfd_cycle_length(i);
-       if (n > max)
-           {
-               max = n;
-           }
-       ++i;
-    }
-    assert(max > 0);
-    return max;
-}
-
-
-int pfd_eval (int i, int j) {
-    // <your code>
-    assert(i > 0);
-    assert(j > 0);
-    if (i <= j)
-    {
-        return pfd_maxcl(i, j);
-    }
-    else
-       return pfd_maxcl(j, i);    //in case numbers are given backwards like someone on piazza said
-    return 1;
-}
-
-        
+      
 // -------------
 // pfd_print
 // -------------
 
-void pfd_print (ostream& w, int i, int j, int v) {
-    w << i << " " << j << " " << v << endl;}
+void pfd_print (ostream& w, list<int> order) {
+    list<int>::iterator i = order.begin();
+    list<int>::iterator e = order.end();
+    string theString = "";
+    
+    while (i != e){
+        if ((next(i)) != e){
+            theString.append(to_string(*i).append(" "));}
+        else{
+            theString.append(to_string(*i));}
+        i++;
+    }
+    w  << theString.append("\n");}
+// ---------------
+// pfd_update_tasks_list
+// ---------------
+
+int pfd_update_tasks_list(int node){
+    if(node == -1 ){//|| adjacency_list[node].empty())
+        return -1;}
+    list<int>::iterator p = adjacency_list[node].begin();
+    while (p != adjacency_list[node].end()){
+        tasks[*p] -= 1;
+        ++p;
+    }
+    return node;
+}
+
 
 // -------------
 // pfd_solve
@@ -158,10 +130,20 @@ void pfd_print (ostream& w, int i, int j, int v) {
 
 void pfd_solve (istream& r, ostream& w) {
     string s;
-    while (getline(r, s)) {
-        const pair<int, int> p = pfd_read(s);
-        const int            i = p.first;
-        const int            j = p.second;
-        const int            v = pfd_eval(i, j);
-        pfd_print(w, i, j, v);}}
-        */
+    getline(r,s);
+    int remaining_lines = pfd_read_first(s);
+    adjacency_list.resize(tasks.size());
+
+    while (remaining_lines > 0) {
+        getline(r, s);
+        build_adj_list(pfd_read_rest(s));
+        remaining_lines -= 1;}
+
+    list<int> order;
+    int k = (pfd_update_tasks_list(pfd_eval()));
+    while(k != -1){
+        
+        order.push_back(k);
+        k =(pfd_update_tasks_list(pfd_eval()));
+    }
+    pfd_print(w, order);}

@@ -117,8 +117,9 @@
         -:  112:    };
         -:  113:
         -:  114:  inline _GLIBCXX_CONSTEXPR _Ios_Openmode
-        -:  115:  operator&(_Ios_Openmode __a, _Ios_Openmode __b)
-        -:  116:  { return _Ios_Openmode(static_cast<int>(__a) & static_cast<int>(__b)); }
+function _ZStanSt13_Ios_OpenmodeS_ called 0 returned 0% blocks executed 0%
+    #####:  115:  operator&(_Ios_Openmode __a, _Ios_Openmode __b)
+    #####:  116:  { return _Ios_Openmode(static_cast<int>(__a) & static_cast<int>(__b)); }
         -:  117:
         -:  118:  inline _GLIBCXX_CONSTEXPR _Ios_Openmode
 function _ZStorSt13_Ios_OpenmodeS_ called 0 returned 0% blocks executed 0%
@@ -160,8 +161,9 @@ function _ZStorSt13_Ios_OpenmodeS_ called 0 returned 0% blocks executed 0%
         -:  154:  { return _Ios_Iostate(static_cast<int>(__a) & static_cast<int>(__b)); }
         -:  155:
         -:  156:  inline _GLIBCXX_CONSTEXPR _Ios_Iostate
-        -:  157:  operator|(_Ios_Iostate __a, _Ios_Iostate __b)
-        -:  158:  { return _Ios_Iostate(static_cast<int>(__a) | static_cast<int>(__b)); }
+function _ZStorSt12_Ios_IostateS_ called 0 returned 0% blocks executed 0%
+    #####:  157:  operator|(_Ios_Iostate __a, _Ios_Iostate __b)
+    #####:  158:  { return _Ios_Iostate(static_cast<int>(__a) | static_cast<int>(__b)); }
         -:  159:
         -:  160:  inline _GLIBCXX_CONSTEXPR _Ios_Iostate
         -:  161:  operator^(_Ios_Iostate __a, _Ios_Iostate __b)

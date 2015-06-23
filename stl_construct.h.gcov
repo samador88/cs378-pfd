@@ -144,8 +144,8 @@ call    1 never executed
         -:  109:    {
         -:  110:      template<typename _ForwardIterator>
         -:  111:        static void
-function _ZNSt12_Destroy_auxILb1EE9__destroyIPiEEvT_S3_ called 5 returned 100% blocks executed 100%
-        5:  112:        __destroy(_ForwardIterator, _ForwardIterator) { }
+function _ZNSt12_Destroy_auxILb1EE9__destroyIPiEEvT_S3_ called 7 returned 100% blocks executed 100%
+        7:  112:        __destroy(_ForwardIterator, _ForwardIterator) { }
         -:  113:    };
         -:  114:
         -:  115:  /**
@@ -155,17 +155,17 @@ function _ZNSt12_Destroy_auxILb1EE9__destroyIPiEEvT_S3_ called 5 returned 100% b
         -:  119:   */
         -:  120:  template<typename _ForwardIterator>
         -:  121:    inline void
-function _ZSt8_DestroyIPiEvT_S1_ called 5 returned 100% blocks executed 100%
+function _ZSt8_DestroyIPiEvT_S1_ called 7 returned 100% blocks executed 100%
 function _ZSt8_DestroyIPSt4listIiSaIiEEEvT_S4_ called 0 returned 0% blocks executed 0%
-        5:  122:    _Destroy(_ForwardIterator __first, _ForwardIterator __last)
+        7:  122:    _Destroy(_ForwardIterator __first, _ForwardIterator __last)
         -:  123:    {
         -:  124:      typedef typename iterator_traits<_ForwardIterator>::value_type
         -:  125:                       _Value_type;
-        5:  126:      std::_Destroy_aux<__has_trivial_destructor(_Value_type)>::
+        7:  126:      std::_Destroy_aux<__has_trivial_destructor(_Value_type)>::
 call    0 returned 100%
 call    1 never executed
         -:  127:	__destroy(__first, __last);
-        5:  128:    }
+        7:  128:    }
         -:  129:
         -:  130:  /**
         -:  131:   * Destroy a range of objects using the supplied allocator.  For
@@ -185,15 +185,15 @@ call    1 never executed
         -:  145:
         -:  146:  template<typename _ForwardIterator, typename _Tp>
         -:  147:    inline void
-function _ZSt8_DestroyIPiiEvT_S1_RSaIT0_E called 5 returned 100% blocks executed 100%
+function _ZSt8_DestroyIPiiEvT_S1_RSaIT0_E called 7 returned 100% blocks executed 100%
 function _ZSt8_DestroyIPSt4listIiSaIiEES2_EvT_S4_RSaIT0_E called 0 returned 0% blocks executed 0%
-        5:  148:    _Destroy(_ForwardIterator __first, _ForwardIterator __last,
+        7:  148:    _Destroy(_ForwardIterator __first, _ForwardIterator __last,
         -:  149:	     allocator<_Tp>&)
         -:  150:    {
-        5:  151:      _Destroy(__first, __last);
+        7:  151:      _Destroy(__first, __last);
 call    0 returned 100%
 call    1 never executed
-        5:  152:    }
+        7:  152:    }
         -:  153:
         -:  154:_GLIBCXX_END_NAMESPACE_VERSION
         -:  155:} // namespace std

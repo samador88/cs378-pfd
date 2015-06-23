@@ -658,10 +658,10 @@ branch  4 never executed
         -:  602:       *  Create a %list consisting of copies of the elements in the
         -:  603:       *  initializer_list @a __l.  This is linear in __l.size().
         -:  604:       */
-function _ZNSt4listIiSaIiEEC2ESt16initializer_listIiERKS0_ called 8 returned 100% blocks executed 67%
-        8:  605:      list(initializer_list<value_type> __l,
+function _ZNSt4listIiSaIiEEC2ESt16initializer_listIiERKS0_ called 12 returned 100% blocks executed 67%
+       12:  605:      list(initializer_list<value_type> __l,
         -:  606:           const allocator_type& __a = allocator_type())
-        8:  607:      : _Base(_Node_alloc_type(__a))
+       12:  607:      : _Base(_Node_alloc_type(__a))
 call    0 returned 100%
 call    1 returned 100%
 branch  2 taken 100% (fallthrough)
@@ -670,7 +670,7 @@ call    4 returned 100%
 call    5 never executed
 call    6 never executed
 call    7 never executed
-        8:  608:      { _M_initialize_dispatch(__l.begin(), __l.end(), __false_type()); }
+       12:  608:      { _M_initialize_dispatch(__l.begin(), __l.end(), __false_type()); }
 call    0 returned 100%
 call    1 returned 100%
 call    2 returned 100%
@@ -1566,11 +1566,11 @@ call    2 never executed
         -: 1484:      template<typename _InputIterator>
         -: 1485:        void
 function _ZNSt4listIiSaIiEE22_M_initialize_dispatchISt20_List_const_iteratorIiEEEvT_S5_St12__false_type called 0 returned 0% blocks executed 0%
-function _ZNSt4listIiSaIiEE22_M_initialize_dispatchIPKiEEvT_S5_St12__false_type called 8 returned 100% blocks executed 100%
-        8: 1486:        _M_initialize_dispatch(_InputIterator __first, _InputIterator __last,
+function _ZNSt4listIiSaIiEE22_M_initialize_dispatchIPKiEEvT_S5_St12__false_type called 12 returned 100% blocks executed 100%
+       12: 1486:        _M_initialize_dispatch(_InputIterator __first, _InputIterator __last,
         -: 1487:			       __false_type)
         -: 1488:        {
-       36: 1489:	  for (; __first != __last; ++__first)
+       55: 1489:	  for (; __first != __last; ++__first)
 call    0 never executed
 call    1 never executed
 branch  2 never executed
@@ -1578,14 +1578,14 @@ branch  3 never executed
 branch  4 taken 78%
 branch  5 taken 22% (fallthrough)
         -: 1490:#if __cplusplus >= 201103L
-       28: 1491:	    emplace_back(*__first);
+       43: 1491:	    emplace_back(*__first);
 call    0 never executed
 call    1 never executed
 call    2 returned 100%
         -: 1492:#else
         -: 1493:	    push_back(*__first);
         -: 1494:#endif
-        8: 1495:	}
+       12: 1495:	}
         -: 1496:
         -: 1497:      // Called by list(n,v,a), and the range constructor when it turns out
         -: 1498:      // to be the same thing.

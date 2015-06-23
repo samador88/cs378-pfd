@@ -17,6 +17,23 @@ using namespace std;
 // TestPFD
 // -----------
 
+
+// -----
+// solve
+// -----
+
+TEST(PFDFixture, solve) {
+    istringstream r("5 4\n3 2 1 5\n2 2 5 3\n4 1 3\n5 1 1\n");
+    ostringstream w;
+    pfd_solve(r, w);
+    ASSERT_EQ("1 5 3 2 4\n", w.str());}
+//---------
+// update
+//---------
+
+TEST(PFDFixture, update) {
+    ASSERT_EQ(pfd_update_tasks_list(3), 3);}
+    
 // ----
 // read_first
 // ----
@@ -94,71 +111,47 @@ TEST(PFDFixture, build_adj3)   {
     list<int> q = {5, 1, 1};
     const int p = build_adj_list(q);
     ASSERT_EQ(1, p);} 
-/*
+
 // ----
 // eval
 // ----
 
 TEST(PFDFixture, eval_1) {
-    const int v = pfd_eval(1, 10);
-    ASSERT_EQ(20, v);}
-
-TEST(PFDFixture, eval_2) {
-    const int v = pfd_eval(100, 200);
-    ASSERT_EQ(125, v);}
-
-TEST(PFDFixture, eval_3) {
-    const int v = pfd_eval(201, 210);
-    ASSERT_EQ(89, v);}
-
-TEST(PFDFixture, eval_4) {
-    const int v = pfd_eval(900, 1000);
-    ASSERT_EQ(174, v);}
-
-TEST(PFDFixture, eval_5) {
-    const int v = pfd_eval(1, 1);
+    const int v = pfd_eval();
     ASSERT_EQ(1, v);}
 
-TEST(PFDFixture, eval_6) {
-    const int v = pfd_eval(200, 100);
-    ASSERT_EQ(125, v);}
-
-TEST(PFDFixture, eval_7) {
-    const int v = pfd_eval(10, 11);
-    ASSERT_EQ(15, v);}
 // -----
 // print
 // -----
 
 TEST(PFDFixture, print) {
     ostringstream w;
-    pfd_print(w, 1, 10, 20);
-    ASSERT_EQ("1 10 20\n", w.str());}
+    list<int> p = {1, 2, 3, 4};
+    pfd_print(w, p);
+    ASSERT_EQ("1 2 3 4\n", w.str());}
 
 TEST(PFDFixture, print2) {
     ostringstream w;
-    pfd_print(w, 100, 200, 125);
-    ASSERT_EQ("100 200 125\n", w.str());}
+    list<int> p = {5, 2, 1, 4};
+    pfd_print(w, p);
+    ASSERT_EQ("5 2 1 4\n", w.str());}
 
 TEST(PFDFixture, print3) {
     ostringstream w;
-    pfd_print(w, 201, 210, 89);
-    ASSERT_EQ("201 210 89\n", w.str());}
+    list<int> p = {5, 2, 1, 4, 3, 7};
+    pfd_print(w, p);
+    ASSERT_EQ("5 2 1 4 3 7\n", w.str());}
 
 TEST(PFDFixture, print4) {
+    list<int> p = {1};
     ostringstream w;
-    pfd_print(w, 900, 1000, 174);}
+    pfd_print(w, p);
+    ASSERT_EQ("1\n", w.str());}
+
+
      
-// -----
-// solve
-// -----
 
-TEST(PFDFixture, solve) {
-    istringstream r("1 10\n100 200\n201 210\n900 1000\n");
-    ostringstream w;
-    pfd_solve(r, w);
-    ASSERT_EQ("1 10 20\n100 200 125\n201 210 89\n900 1000 174\n", w.str());}
-
+/*
 TEST(PFDFixture, solve2) {
     istringstream r("210 201\n");
     ostringstream w;
@@ -176,6 +169,7 @@ TEST(PFDFixture, solve4) {
     ostringstream w;
     pfd_solve(r, w);
     ASSERT_EQ("1 1 1\n200 100 125\n10 11 15\n1 2 2\n", w.str());}
+
 
 // -----
 // cycle length

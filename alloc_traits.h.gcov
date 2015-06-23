@@ -255,8 +255,11 @@
         -:  250:      template<typename _Tp, typename... _Args>
         -:  251:	static typename
         -:  252:       	enable_if<__construct_helper<_Tp, _Args...>::value, void>::type
-        -:  253:       	_S_construct(_Alloc& __a, _Tp* __p, _Args&&... __args)
-        -:  254:	{ __a.construct(__p, std::forward<_Args>(__args)...); }
+function _ZNSt16allocator_traitsISaIiEE12_S_constructIiIiEEENSt9enable_ifIXsrNS1_18__construct_helperIT_IDpT0_EEE5valueEvE4typeERS0_PS5_DpOS6_ called 6 returned 100% blocks executed 100%
+        6:  253:       	_S_construct(_Alloc& __a, _Tp* __p, _Args&&... __args)
+        6:  254:	{ __a.construct(__p, std::forward<_Args>(__args)...); }
+call    0 returned 100%
+call    1 returned 100%
         -:  255:
         -:  256:      template<typename _Tp, typename... _Args>
         -:  257:	static typename
@@ -282,8 +285,10 @@
         -:  277:
         -:  278:      template<typename _Tp>
         -:  279:	static typename enable_if<__destroy_helper<_Tp>::value, void>::type
-        -:  280:       	_S_destroy(_Alloc& __a, _Tp* __p)
-        -:  281:	{ __a.destroy(__p); }
+function _ZNSt16allocator_traitsISaIiEE10_S_destroyIiEENSt9enable_ifIXsrNS1_16__destroy_helperIT_EE5valueEvE4typeERS0_PS5_ called 6 returned 100% blocks executed 100%
+        6:  280:       	_S_destroy(_Alloc& __a, _Tp* __p)
+        6:  281:	{ __a.destroy(__p); }
+call    0 returned 100%
         -:  282:
         -:  283:      template<typename _Tp>
         -:  284:	static typename enable_if<!__destroy_helper<_Tp>::value, void>::type
@@ -308,9 +313,9 @@
         -:  303:	static typename
         -:  304:       	enable_if<__maxsize_helper<_Alloc2>::value, size_type>::type
 function _ZNSt16allocator_traitsISaISt4listIiSaIiEEEE11_S_max_sizeIKS3_EENSt9enable_ifIXsrNS4_16__maxsize_helperIT_EE5valueEmE4typeERS9_ called 0 returned 0% blocks executed 0%
-function _ZNSt16allocator_traitsISaIiEE11_S_max_sizeIKS0_EENSt9enable_ifIXsrNS1_16__maxsize_helperIT_EE5valueEmE4typeERS6_ called 4 returned 100% blocks executed 100%
-        4:  305:       	_S_max_size(_Alloc2& __a)
-        4:  306:	{ return __a.max_size(); }
+function _ZNSt16allocator_traitsISaIiEE11_S_max_sizeIKS0_EENSt9enable_ifIXsrNS1_16__maxsize_helperIT_EE5valueEmE4typeERS6_ called 8 returned 100% blocks executed 100%
+        8:  305:       	_S_max_size(_Alloc2& __a)
+        8:  306:	{ return __a.max_size(); }
 call    0 never executed
 call    1 returned 100%
         -:  307:
@@ -397,9 +402,12 @@ call    1 returned 100%
         -:  388:       *  arguments @a __args...
         -:  389:      */
         -:  390:      template<typename _Tp, typename... _Args>
-        -:  391:	static auto construct(_Alloc& __a, _Tp* __p, _Args&&... __args)
+function _ZNSt16allocator_traitsISaIiEE9constructIiIiEEEDTcl12_S_constructfp_fp0_spcl7forwardIT0_Efp1_EEERS0_PT_DpOS3_ called 6 returned 100% blocks executed 100%
+        6:  391:	static auto construct(_Alloc& __a, _Tp* __p, _Args&&... __args)
         -:  392:	-> decltype(_S_construct(__a, __p, std::forward<_Args>(__args)...))
-        -:  393:	{ _S_construct(__a, __p, std::forward<_Args>(__args)...); }
+        6:  393:	{ _S_construct(__a, __p, std::forward<_Args>(__args)...); }
+call    0 returned 100%
+call    1 returned 100%
         -:  394:
         -:  395:      /**
         -:  396:       *  @brief  Destroy an object of type @a _Tp
@@ -410,8 +418,10 @@ call    1 returned 100%
         -:  401:       *  otherwise calls @c __p->~_Tp()
         -:  402:      */
         -:  403:      template <class _Tp>
-        -:  404:	static void destroy(_Alloc& __a, _Tp* __p)
-        -:  405:	{ _S_destroy(__a, __p); }
+function _ZNSt16allocator_traitsISaIiEE7destroyIiEEvRS0_PT_ called 6 returned 100% blocks executed 100%
+        6:  404:	static void destroy(_Alloc& __a, _Tp* __p)
+        6:  405:	{ _S_destroy(__a, __p); }
+call    0 returned 100%
         -:  406:
         -:  407:      /**
         -:  408:       *  @brief  The maximum supported allocation size
@@ -422,9 +432,9 @@ call    1 returned 100%
         -:  413:       *  otherwise returns @c numeric_limits<size_type>::max()
         -:  414:      */
 function _ZNSt16allocator_traitsISaISt4listIiSaIiEEEE8max_sizeERKS3_ called 0 returned 0% blocks executed 0%
-function _ZNSt16allocator_traitsISaIiEE8max_sizeERKS0_ called 4 returned 100% blocks executed 100%
-        4:  415:      static size_type max_size(const _Alloc& __a)
-        4:  416:      { return _S_max_size(__a); }
+function _ZNSt16allocator_traitsISaIiEE8max_sizeERKS0_ called 8 returned 100% blocks executed 100%
+        8:  415:      static size_type max_size(const _Alloc& __a)
+        8:  416:      { return _S_max_size(__a); }
 call    0 never executed
 call    1 returned 100%
         -:  417:

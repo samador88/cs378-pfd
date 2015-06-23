@@ -125,8 +125,8 @@ function _ZNSaISt10_List_nodeIiEEC2ERKS1_ called 0 returned 0% blocks executed 0
 call    0 never executed
         -:  117:
         -:  118:      template<typename _Tp1>
-function _ZNSaISt10_List_nodeIiEEC2IiEERKSaIT_E called 8 returned 100% blocks executed 100%
-        8:  119:        allocator(const allocator<_Tp1>&) throw() { }
+function _ZNSaISt10_List_nodeIiEEC2IiEERKSaIT_E called 12 returned 100% blocks executed 100%
+       12:  119:        allocator(const allocator<_Tp1>&) throw() { }
 call    0 returned 100%
         -:  120:
 function _ZNSaISt10_List_nodeIiEED2Ev called 0 returned 0% blocks executed 0%
